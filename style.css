@@ -176,7 +176,7 @@
 
 .reviews {
   height: 100vh;
-  background: lightgrey; }
+  background: #dbcaca; }
   .reviews .reviews__list {
     display: flex;
     flex-wrap: wrap; }
