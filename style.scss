@@ -1,0 +1,248 @@
+$orange_button:#e45028;
+$orange_head:#f9b43b;
+@font-face {
+    font-family: 'lifehack';
+    src:local(Lifehack), 
+    url('fonts/lifehack/lifehack_medium-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gagalin';
+    src:local(gagalin), 
+    url('fonts/Gagalin/gagalin-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+%section-header{
+    font-family: 'gagalin',sans-serif;
+    font-size:92px;
+    line-height: 85px;
+    text-transform: uppercase; 
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Ubuntu', sans-serif;
+  
+}
+// @font-face {
+//     font-family: 'Lifehack';
+//     src: url('fonts/lifehack/lifehack_medium-webfont.woff2') format('woff2'),
+//          url('lifehack_medium-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+.welcome{
+    background:url('welcome-background.png') center center no-repeat;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    color:white;
+}
+.welcome-container{
+    // width:1100px;
+    // margin: 0 auto;
+    padding: 0 113px;
+}
+.logo{
+    background:url('icons/logo.svg') center center no-repeat ;
+    width:100px;
+    height:80px;
+    transform: scale(1.1);
+}
+.navbar{
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    align-items:center;
+    padding-top:20px;
+    background:red;
+    .navigation-list{
+        display: flex;
+        justify-content: around;
+        background: green;
+        /* width: 884px; */
+        margin-left: 59px;
+        justify-content: space-around;
+        .navigation__item{
+            color: #ffffff;
+            font-family: 'Ubuntu';
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-right: 45px;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:first-child{
+                list-style: none;
+            }
+        }
+    }
+}
+.welcome-content{
+    background:pink;    
+    display: flex;
+    .burger-image{
+        transform: scale(0.84);
+        background:black;
+        // background:url('icons/drops.svg') center no-repeat;
+        &:before{
+            content: "";
+            width: 600px;
+            height: 500px;
+            background-image: url("file:///Users/tweecezor/Documents/GitHub/Loft-Burger/icons/drops.svg");
+           background-repeat: no-repeat;
+            position: absolute;
+            top: 247px;
+            left: 102px;
+            z-index: -1;
+            transform: scale(1.45);
+        }
+    }
+    .welcome-content__text{
+        background: brown;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .welcome-content__desc{
+            font-family: 'lifehack',sans-serif;
+            font-size:75px;
+            line-height: 60px;
+            text-transform: lowercase; 
+            background: #000;
+        }
+        .welcome-content__caption{
+            @extend %section-header;
+            color:$orange_head; 
+            background: red;
+        }
+    }
+    
+   
+}
+
+.navbar__order-link{
+    background-color:$orange_button;
+    border-radius: 5px;
+    width: 120px;
+    display: block;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.section-change{   
+    position: fixed;
+    top: 123px;
+    right: 82px;
+    .change__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        .change__item{
+            margin-bottom: 28px;
+            .change__link{
+                position: relative;
+                &:after{
+                    content:'';
+                    width:6px;
+                    height: 6px;
+                    background: white;
+                    border-radius: 50%;
+                    position: absolute;
+                }
+                &:hover{
+                    &:before{
+                        content:'';
+                        width:17px;
+                        height: 17px;
+                        border:2px solid white;
+                        border-radius: 50%;
+                        position: absolute;
+                        left:-7px;
+                        top:-6px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.scroll-down-arrow{
+    background:url('icons/arrow-scroll.svg') center center no-repeat;
+    width:50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.we-best{
+    background:url('we-best-background.png') center center no-repeat;
+    width:100%;
+    height: 100vh;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 95px;
+    .we-best__title{
+        color:black;
+        @extend %section-header;
+        padding-bottom: 100px;
+    }
+    .advantages{
+        display: flex;
+        list-style: none;
+        .advantages__item{
+            display: flex;
+            flex-direction: column;
+            width:33%;
+            justify-content: space-between;
+            // background:red;
+            // border: 2px solid black;
+            text-align: center;
+            .advantages__img{
+                transform: scale(1.4);
+                padding-bottom: 40px;
+            }
+            .advantages__caption{
+                font-family: 'lifehack', sans-serif;
+                font-size: 30px;
+              
+            }
+            .advantages__text{
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 300;
+                font-size: 17px;
+            }
+        }
+    }
+}
+.reviews{
+    height: 100vh;
+    background:grey;
+    .reviews__list{
+        display: flex;
+        flex-wrap: wrap;
+        @each $pos in (1,2,3,4,5,6,7,8) {
+            .reviews__item{
+                list-style: none;
+                width:25%;
+                height: 50vh;
+                .reviews__avatar{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

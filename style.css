@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'lifehack';
+  src: local(Lifehack), url("fonts/lifehack/lifehack_medium-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gagalin';
+  src: local(gagalin), url("fonts/Gagalin/gagalin-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+.welcome-content .welcome-content__text .welcome-content__caption, .we-best .we-best__title {
+  font-family: 'gagalin',sans-serif;
+  font-size: 92px;
+  line-height: 85px;
+  text-transform: uppercase; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif; }
+
+.welcome {
+  background: url("welcome-background.png") center center no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white; }
+
+.welcome-container {
+  padding: 0 113px; }
+
+.logo {
+  background: url("icons/logo.svg") center center no-repeat;
+  width: 100px;
+  height: 80px;
+  transform: scale(1.1); }
+
+.navbar {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  background: red; }
+  .navbar .navigation-list {
+    display: flex;
+    justify-content: around;
+    background: green;
+    /* width: 884px; */
+    margin-left: 59px;
+    justify-content: space-around; }
+    .navbar .navigation-list .navigation__item {
+      color: #ffffff;
+      font-family: 'Ubuntu';
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-right: 45px; }
+      .navbar .navigation-list .navigation__item:last-child {
+        margin-right: 0; }
+      .navbar .navigation-list .navigation__item:first-child {
+        list-style: none; }
+
+.welcome-content {
+  background: pink;
+  display: flex; }
+  .welcome-content .burger-image {
+    transform: scale(0.84);
+    background: black; }
+    .welcome-content .burger-image:before {
+      content: "";
+      width: 600px;
+      height: 500px;
+      background-image: url("file:///Users/tweecezor/Documents/GitHub/Loft-Burger/icons/drops.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 247px;
+      left: 102px;
+      z-index: -1;
+      transform: scale(1.45); }
+  .welcome-content .welcome-content__text {
+    background: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .welcome-content .welcome-content__text .welcome-content__desc {
+      font-family: 'lifehack',sans-serif;
+      font-size: 75px;
+      line-height: 60px;
+      text-transform: lowercase;
+      background: #000; }
+    .welcome-content .welcome-content__text .welcome-content__caption {
+      color: #f9b43b;
+      background: red; }
+
+.navbar__order-link {
+  background-color: #e45028;
+  border-radius: 5px;
+  width: 120px;
+  display: block;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px; }
+
+.section-change {
+  position: fixed;
+  top: 123px;
+  right: 82px; }
+  .section-change .change__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+    .section-change .change__list .change__item {
+      margin-bottom: 28px; }
+      .section-change .change__list .change__item .change__link {
+        position: relative; }
+        .section-change .change__list .change__item .change__link:after {
+          content: '';
+          width: 6px;
+          height: 6px;
+          background: white;
+          border-radius: 50%;
+          position: absolute; }
+        .section-change .change__list .change__item .change__link:hover:before {
+          content: '';
+          width: 17px;
+          height: 17px;
+          border: 2px solid white;
+          border-radius: 50%;
+          position: absolute;
+          left: -7px;
+          top: -6px; }
+
+.scroll-down-arrow {
+  background: url("icons/arrow-scroll.svg") center center no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto; }
+
+.we-best {
+  background: url("we-best-background.png") center center no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 95px; }
+  .we-best .we-best__title {
+    color: black;
+    padding-bottom: 100px; }
+  .we-best .advantages {
+    display: flex;
+    list-style: none; }
+    .we-best .advantages .advantages__item {
+      display: flex;
+      flex-direction: column;
+      width: 33%;
+      justify-content: space-between;
+      text-align: center; }
+      .we-best .advantages .advantages__item .advantages__img {
+        transform: scale(1.4);
+        padding-bottom: 40px; }
+      .we-best .advantages .advantages__item .advantages__caption {
+        font-family: 'lifehack', sans-serif;
+        font-size: 30px; }
+      .we-best .advantages .advantages__item .advantages__text {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        font-size: 17px; }
+
+.reviews {
+  height: 100vh;
+  background: grey; }
+  .reviews .reviews__list {
+    display: flex;
+    flex-wrap: wrap; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      list-style: none;
+      width: 25%;
+      height: 50vh; }
+      .reviews .reviews__list .reviews__item .reviews__avatar {
+        width: 100%;
+        height: 100%; }
+
+/*# sourceMappingURL=style.css.map */
