@@ -16,20 +16,22 @@ $orange_head:#f9b43b;
 }
 %section-header{
     font-family: 'gagalin',sans-serif;
-    font-size:92px;
-    line-height: 85px;
+    font-size:72px;
+    // line-height: 85px;
     text-transform: uppercase; 
 }
 %button{
     border-radius: 5px;
-    width: 120px;
+    // width: 120px;
     display: block;
-    height: 44px;
+    padding: 10px 15px;
+    // height: 44px;
     text-align: center;
-    line-height: 44px;
+    // line-height: 44px;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight:500;
     color:white
 }
 *{
@@ -45,6 +47,7 @@ $orange_head:#f9b43b;
 //          url('lifehack_medium-webfont.woff') format('woff');
 //     font-weight: normal;
 //     font-style: normal;
+// headet footer map slider fixednav 
 // }
 
 .section{
@@ -58,102 +61,169 @@ $orange_head:#f9b43b;
     height: 100vh;
     display: flex;
     color:white;
+    position: relative;
 }
 .container{
     // width:1100px;
     // margin: 0 auto;
-    width: 940px;
+    width: 1100px;
+    padding: 0 80px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.logo{
-    background:url('icons/logo.svg') center center no-repeat ;
-    width:100px;
-    height:80px;
-    transform: scale(1.1);
-}
+
 .header{
     display: flex;
     color:white;
     justify-content: space-between;
     align-items:center;
     padding-top:20px;
-    background:red;
-    .navigation-list{
+    .logo{
+        background:url('icons/logo.svg') center center no-repeat ;
+        width:100px;
+        height:80px;
+        transform: scale(1.1);
+    }
+    .header__buttons{
         display: flex;
-        justify-content: around;
-        background: green;
-        /* width: 884px; */
-        margin-left: 59px;
-        justify-content: space-around;
-        .navigation__item{
-            color: #ffffff;
-            font-family: 'Ubuntu';
-            font-size: 18px;
-            font-weight: 500;
-            text-transform: uppercase;
-            margin-right: 45px;
-            &:last-child{
-                margin-right: 0;
-            }
-            &:first-child{
-                list-style: none;
+        justify-content: flex-end;
+        align-items: center;
+        .menu__list{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            .menu__item{
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                &:last-child{
+                    margin-right: 0;
+                    &:after{
+                        display: none;
+                    }
+                }
+                &:after{
+                    content:'';
+                    width: 4px;
+                    height: 4px;
+                    background: #fff;
+                    border-radius: 50%;
+                    margin-left: 15px;
+
+                }
+
+                .menu__link{
+                    font-size: 13px;
+                    color:white;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
             }
         }
+        .header__order-btn{
+            background-color:$orange_button;
+            @extend %button;
+            margin-left: 15px;
+        }
     }
+    .btn{
+        @extend %button;
+    }
+    // .navigation-list{
+    //     display: flex;
+    //     justify-content: around;
+    //     background: green;
+    //     /* width: 884px; */
+    //     margin-left: 59px;
+    //     justify-content: space-around;
+    //     .navigation__item{
+    //         color: #ffffff;
+    //         font-family: 'Ubuntu';
+    //         font-size: 18px;
+    //         font-weight: 500;
+    //         text-transform: uppercase;
+    //         margin-right: 45px;
+    //         &:last-child{
+    //             margin-right: 0;
+    //         }
+    //         &:first-child{
+    //             list-style: none;
+    //         }
+    //     }
+    // }
 }
 .welcome__content{
-    background:pink;    
+    flex:.8;
     display: flex;
-    .welcome__content-image{
-        transform: scale(0.84);
-        background:black;
-        // background:url('icons/drops.svg') center no-repeat;
-        &:before{
-            content: "";
-            width: 600px;
-            height: 500px;
-            background-image: url("file:///Users/tweecezor/Documents/GitHub/Loft-Burger/icons/drops.svg");
-           background-repeat: no-repeat;
-            position: absolute;
-            top: 247px;
-            left: 102px;
-            z-index: -1;
-            transform: scale(1.45);
-        }
+    align-items: center;
+   
+
+    .welcome__content-caption{
+        @extend %section-header;
+        color:$orange_head;
+        margin-bottom: 45px;
+        line-height: 1;
     }
-    .welcome__content-text{
-        background: brown;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .welcome-content__desc{
-            font-family: 'lifehack',sans-serif;
-            font-size:75px;
-            line-height: 60px;
+    .welcome__content-desc{
+        font-family: 'lifehack',sans-serif;
+            font-size:65px;
+            line-height: 1;
             text-transform: lowercase; 
-            background: #000;
-        }
-        .welcome-content__caption{
-            @extend %section-header;
-            color:$orange_head; 
-            background: red;
-        }
+           // background: #000;
     }
+}
+// .welcome__content{
+//     background:pink;    
+//     display: flex;
+//     .welcome__content-image{
+//         transform: scale(0.84);
+//         background:black;
+//         &:before{
+//             content: "";
+//             width: 600px;
+//             height: 500px;
+//             background-image: url("file:///Users/tweecezor/Documents/GitHub/Loft-Burger/icons/drops.svg");
+//            background-repeat: no-repeat;
+//             position: absolute;
+//             top: 247px;
+//             left: 102px;
+//             z-index: -1;
+//             transform: scale(1.45);
+//         }
+//     }
+//     .welcome__content-text{
+//         background: brown;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         .welcome-content__desc{
+//             font-family: 'lifehack',sans-serif;
+//             font-size:75px;
+//             line-height: 60px;
+//             text-transform: lowercase; 
+//             background: #000;
+//         }
+//         .welcome-content__caption{
+//             @extend %section-header;
+//             color:$orange_head; 
+//             background: red;
+//         }
+//     }
     
    
-}
+// }
 
-.navbar__order-link{
-    background-color:$orange_button;
-    @extend %button;
-}
 
-.section-change{   
-    position: fixed;
-    z-index: 1000;
-    top: 123px;
-    right: 82px;
+
+// .section-change{   
+  
     .change__list{
+        position: fixed;
+        z-index: 1000;
+        top: 123px;
+        right: 82px;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -168,6 +238,9 @@ $orange_head:#f9b43b;
                     background: white;
                     border-radius: 50%;
                     position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
                 }
                 &:hover{
                     &:before{
@@ -177,22 +250,30 @@ $orange_head:#f9b43b;
                         border:2px solid white;
                         border-radius: 50%;
                         position: absolute;
-                        left:-7px;
-                        top:-6px;
+                        // left:-7px;
+                        // top:-6px;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%,-50%);
+                        transition: 0.4s;
                     }
                 }
             }
         }
         
     }
-}
+// }
 
 .scroll-down-arrow{
     background:url('icons/arrow-scroll.svg') center center no-repeat;
     width:50px;
     height: 50px;
-    margin: 0 auto;
+    // margin: 0 auto;
     display: block;
+    position: absolute;
+    bottom:40px;
+    transform: translate(-50%);
+    left:50%;
 }
 
 .we-best{
@@ -219,11 +300,9 @@ $orange_head:#f9b43b;
             flex-direction: column;
             width:33%;
             justify-content: space-between;
-            // background:red;
-            // border: 2px solid black;
             text-align: center;
             .advantages__img{
-                transform: scale(1.4);
+                // transform: scale(1.4);
                 padding-bottom: 40px;
             }
             .advantages__caption{
@@ -312,31 +391,31 @@ $orange_head:#f9b43b;
     color:red;
     text-align: center;
 }
-.menu{
-    width:100%;
-    height: 100vh;
-    background: green;
-    color:red;
-    display: flex;
-    background:url('menu-background.png');
-    background-size: cover;
-    .menu__header{
-        @extend %section-header;
-        color:white;
-        padding-left: 9%;
-        // background: #000;
-        height: 40vh;
-        display: flex;
-        align-items: flex-end;
-        background: #000;
-        flex:4;
-    }
-    .menu__nav{
-        background: red;
-        list-style: none;
-        flex:1;
-    }
-}
+// .menu{
+//     width:100%;
+//     height: 100vh;
+//     background: green;
+//     color:red;
+//     display: flex;
+//     background:url('menu-background.png');
+//     background-size: cover;
+//     .menu__header{
+//         @extend %section-header;
+//         color:white;
+//         padding-left: 9%;
+//         // background: #000;
+//         height: 40vh;
+//         display: flex;
+//         align-items: flex-end;
+//         background: #000;
+//         flex:4;
+//     }
+//     .menu__nav{
+//         background: red;
+//         list-style: none;
+//         flex:1;
+//     }
+// }
 .our-work{
     width:100%;
     height: 100vh;

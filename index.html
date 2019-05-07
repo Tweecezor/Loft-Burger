@@ -13,26 +13,42 @@
         <div class="container">
             <header class="header">
                 <div class="logo"></div>    
-                <nav class="navbar__navigation">
-                    <ul class="navigation-list">
-                        <li class="navigation__item">О нас</li>
-                        <li class="navigation__item">Бургеры</li>
-                        <li class="navigation__item">Команда</li>
-                        <li class="navigation__item">Меню</li>
-                        <li class="navigation__item">Отзывы</li>
-                        <li class="navigation__item">Как мы работаем</li>
-                        <li class="navigation__item">Контакты</li>
-                    </ul>
-                </nav>
-                <a href="#" class="navbar__order-link">Заказать</a>
+                <div class="header__buttons">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">О нас</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Бургеры</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Команда</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Меню</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Отзывы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Как мы работаем</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="btn header__order-btn">Заказать</a>
+                </div>
             </header>
             <div class="welcome__content">
                 <div class="welcome__content-image">
-                    <img src="welcome-burger.png" alt="" class="burger-img">
+                    <img src="burger.png" alt="" class="burger-img">
                 </div> 
                 <div class="welcome__content-text">
-                    <h1 class="welcome-content__caption">Мы делаем</h1>
-                    <div class="welcome-content__desc">Натуральные бургеры</div>
+                    <h1 class="welcome__content-caption">Мы делаем</h1>
+                    <div class="welcome__content-desc">Натуральные бургеры</div>
                 </div>
             </div>
             <a class="scroll-down-arrow"></a>
@@ -68,24 +84,23 @@
             </li>
         </ul>
     </section>
-    <section class="burger-slider section">
+    <!-- <section class="burger-slider section">
         слайдер
-    </section>
-    <section class="team section">
+    </section> -->
+    <!-- <section class="team section">
         КОМАНДА
-    </section>
-    <section class="menu section">
+    </section> -->
+    <!-- <section class="menu section">
       <h1 class="menu__header">Меню</h1>
       <ul class="menu__nav">
           <li class="menu__nav-item">Для мясоедов</li>
           <li class="menu__nav-item">Вегетарианское меню</li>
           <li class="menu__nav-item">Детское</li>
       </ul>
-    </section>
+    </section> -->
     <section class="reviews section">
         <ul class="reviews__list">
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-1.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar grayscale" style="background:url(reviews-avatar-1.png);background-position: 50%;background-size:cover">
                     <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -96,7 +111,6 @@
                 </div>
             </li>
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-2.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar" style="background:url(reviews-avatar-2.png);background-position: 80%;background-size: cover;">
                    <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -107,7 +121,6 @@
                 </div>
             </li>
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-3.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar" style="background:url(reviews-avatar-3.png);background-position: 50%;background-size: cover;">
                    <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -118,7 +131,6 @@
                 </div>
             </li>
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-4.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar" style="background:url(reviews-avatar-4.png);background-position: 50%;background-size: cover;">
                    <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -129,7 +141,6 @@
                 </div>
             </li>
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-5.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar" style="background:url(reviews-avatar-5.png);background-position: 50%;background-size: cover;">
                     <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -140,7 +151,6 @@
                 </div>
             </li>
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-6.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar" style="background:url(reviews-avatar-6.png);background-position: 50%;background-size: cover;">
                     <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -151,7 +161,6 @@
                 </div>
             </li>
             <li class="reviews__item">
-                <!-- <img src="reviews-avatar-7.png" alt="" class="reviews__avatar"> -->
                 <div class="reviews__avatar" style="background:url(reviews-avatar-7.png);background-position: 50%;background-size: cover;">
                     <div class="reviews__content">        
                         <h2 class="reviews__name">Константин Спилберг</h2>
@@ -173,17 +182,17 @@
             </li>
         </ul>
     </section>
-    <section class="our-work section">
+    <!-- <section class="our-work section">
         КАК мы РАБОТАЕМ
-    </section>
-    <section class="delivery section">
+    </section> -->
+    <!-- <section class="delivery section">
       ДОСТАВКА
-    </section>
-    <section class="map section">
+    </section> -->
+    <!-- <section class="map section">
        КАРТА И ФУТЕР
-      </section>
+      </section> -->
 
-    <aside class="section-change">
+    <!-- <aside class="section-change"> -->
         <ul class="change__list">
             <li class="change__item"><a href="#" class="change__link"></a></li>
             <li class="change__item"><a href="#" class="change__link"></a></li>
@@ -195,6 +204,6 @@
             <li class="change__item"><a href="#" class="change__link"></a></li>
             <li class="change__item"><a href="#" class="change__link"></a></li>
         </ul>
-    </aside>
+    <!-- </aside> -->
 </body>
 </html>
