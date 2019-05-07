@@ -8,12 +8,12 @@
   src: local(gagalin), url("fonts/Gagalin/gagalin-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
-.welcome__content .welcome__content-caption, .we-best .we-best__title {
+.section-title {
   font-family: 'gagalin',sans-serif;
   font-size: 72px;
   text-transform: uppercase; }
 
-.header .header__buttons .header__order-btn, .header .btn, .reviews .reviews__list .reviews__item .reviews__avatar .reviews__content .reviews__more-link {
+.btn {
   border-radius: 5px;
   display: block;
   padding: 10px 15px;
@@ -56,7 +56,7 @@
   color: white;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px; }
+  padding-top: 6px; }
   .header .logo {
     background: url("icons/logo.svg") center center no-repeat;
     width: 100px;
@@ -71,7 +71,7 @@
       align-items: center;
       list-style: none; }
       .header .header__buttons .menu__list .menu__item {
-        margin-right: 20px;
+        margin-right: 16px;
         display: flex;
         align-items: center; }
         .header .header__buttons .menu__list .menu__item:last-child {
@@ -95,13 +95,17 @@
       margin-left: 15px; }
 
 .welcome__content {
-  flex: .8;
-  display: flex;
-  align-items: center; }
+  display: flex; }
+  .welcome__content .welcome__content-image {
+    padding: 0 15px; }
+  .welcome__content .welcome__content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px; }
   .welcome__content .welcome__content-caption {
     color: #f9b43b;
-    margin-bottom: 45px;
-    line-height: 1; }
+    line-height: 2; }
   .welcome__content .welcome__content-desc {
     font-family: 'lifehack',sans-serif;
     font-size: 65px;
@@ -112,12 +116,12 @@
   position: fixed;
   z-index: 1000;
   top: 123px;
-  right: 82px;
+  right: 58px;
   list-style: none;
   display: flex;
   flex-direction: column; }
   .change__list .change__item {
-    margin-bottom: 28px; }
+    margin-bottom: 21px; }
     .change__list .change__item .change__link {
       position: relative; }
       .change__list .change__item .change__link:after {
@@ -148,42 +152,48 @@
   height: 50px;
   display: block;
   position: absolute;
-  bottom: 40px;
+  bottom: 5%;
   transform: translate(-50%);
   left: 50%; }
 
 .we-best {
-  background: url("best-background.png") center center no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  color: black;
+  background: url("best-background.png") center center/cover no-repeat; }
+
+.we-best__list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 95px; }
-  .we-best .we-best__title {
-    color: black;
-    padding-bottom: 100px; }
-  .we-best .advantages {
-    display: flex;
-    list-style: none; }
-    .we-best .advantages .advantages__item {
-      display: flex;
-      flex-direction: column;
-      width: 33%;
-      justify-content: space-between;
-      text-align: center; }
-      .we-best .advantages .advantages__item .advantages__img {
-        padding-bottom: 40px; }
-      .we-best .advantages .advantages__item .advantages__caption {
-        font-family: 'lifehack', sans-serif;
-        font-size: 30px; }
-      .we-best .advantages .advantages__item .advantages__text {
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 300;
-        font-size: 17px; }
+  list-style: none; }
+  .we-best__list .we-best__item {
+    flex: 1;
+    margin-right: 10px; }
+    .we-best__list .we-best__item:last-child {
+      margin-right: 0; }
+
+.we-best-container {
+  justify-content: center; }
+
+.advantages .advantages__img {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center; }
+.advantages .advantages__desc {
+  text-align: center; }
+.advantages .advantages__caption {
+  font-family: 'lifehack', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px; }
+.advantages .advantages__text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5; }
+
+.we-best__title {
+  color: black;
+  padding-bottom: 100px; }
+
+.section-title--centered {
+  text-align: center; }
 
 .reviews {
   height: 100vh;
@@ -216,17 +226,17 @@
           .reviews .reviews__list .reviews__item .reviews__avatar .reviews__content .reviews__text {
             font-family: 'Ubuntu',sans-serif;
             font-weight: lighter;
-            font-size: 17px;
+            font-size: 14px;
             line-height: 24px;
             padding-bottom: 30px; }
           .reviews .reviews__list .reviews__item .reviews__avatar .reviews__content .reviews__name {
             font-family: 'Gagalin',sans-serif;
             text-transform: uppercase;
-            font-size: 17px;
+            font-size: 14px;
             padding-bottom: 30px; }
           .reviews .reviews__list .reviews__item .reviews__avatar .reviews__content .reviews__more-link {
             background-color: #2f3234;
-            width: 130px; }
+            width: 110px; }
 
 .burger-slider {
   width: 100%;
