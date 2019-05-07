@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500" rel="stylesheet">
 </head>
 <body>
-    <section class="welcome ">
-        <div class="welcome-container">
-            <nav class="navbar">
+    <section class="welcome section">
+        <div class="container">
+            <header class="header">
                 <div class="logo"></div>    
-                <!-- <nav class="navbar__navigation"> -->
+                <nav class="navbar__navigation">
                     <ul class="navigation-list">
                         <li class="navigation__item">О нас</li>
                         <li class="navigation__item">Бургеры</li>
@@ -23,35 +23,22 @@
                         <li class="navigation__item">Как мы работаем</li>
                         <li class="navigation__item">Контакты</li>
                     </ul>
-                <!-- </nav> -->
-                <a href="#" class="navbar__order-link">Заказать</a>
                 </nav>
-            <div class="welcome-content">
-                <div class="burger-image">
+                <a href="#" class="navbar__order-link">Заказать</a>
+            </header>
+            <div class="welcome__content">
+                <div class="welcome__content-image">
                     <img src="welcome-burger.png" alt="" class="burger-img">
                 </div> 
-                <div class="welcome-content__text">
+                <div class="welcome__content-text">
                     <h1 class="welcome-content__caption">Мы делаем</h1>
-                    <p class="welcome-content__desc">Натуральные бургеры</p>
+                    <div class="welcome-content__desc">Натуральные бургеры</div>
                 </div>
             </div>
-            <div class="scroll-down-arrow"></div>
+            <a class="scroll-down-arrow"></a>
         </div>
-        <aside class="section-change">
-           <ul class="change__list">
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-               <li class="change__item"><a href="#" class="change__link"></a></li>
-           </ul>
-        </aside>
     </section>
-    <section class="we-best">
+    <section class="we-best section">
         <h1 class="we-best__title">Мы лучшие</h1>
         <ul class="we-best__list advantages">
             <li class="advantages__item">
@@ -81,73 +68,133 @@
             </li>
         </ul>
     </section>
-    <section class="reviews">
+    <section class="burger-slider section">
+        слайдер
+    </section>
+    <section class="team section">
+        КОМАНДА
+    </section>
+    <section class="menu section">
+      <h1 class="menu__header">Меню</h1>
+      <ul class="menu__nav">
+          <li class="menu__nav-item">Для мясоедов</li>
+          <li class="menu__nav-item">Вегетарианское меню</li>
+          <li class="menu__nav-item">Детское</li>
+      </ul>
+    </section>
+    <section class="reviews section">
         <ul class="reviews__list">
-            <li class="reviews__item" style="background:url(reviews-avatar-8.png);width:25%;height: 100%/2;">
+            <li class="reviews__item">
                 <!-- <img src="reviews-avatar-1.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar grayscale" style="background:url(reviews-avatar-1.png);background-position: 50%;background-size:cover">
+                    <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
-               
             </li>
             <li class="reviews__item">
                 <!-- <img src="reviews-avatar-2.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-2.png);background-position: 80%;background-size: cover;">
+                   <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
             <li class="reviews__item">
                 <!-- <img src="reviews-avatar-3.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-3.png);background-position: 50%;background-size: cover;">
+                   <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
             <li class="reviews__item">
                 <!-- <img src="reviews-avatar-4.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-4.png);background-position: 50%;background-size: cover;">
+                   <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
             <li class="reviews__item">
                 <!-- <img src="reviews-avatar-5.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-5.png);background-position: 50%;background-size: cover;">
+                    <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
             <li class="reviews__item">
                 <!-- <img src="reviews-avatar-6.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-6.png);background-position: 50%;background-size: cover;">
+                    <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
             <li class="reviews__item">
                 <!-- <img src="reviews-avatar-7.png" alt="" class="reviews__avatar"> -->
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text">текст</p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-7.png);background-position: 50%;background-size: cover;">
+                    <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
             <li class="reviews__item"  >
-                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png)">
-                        <h2 class="reviews__name"></h2>
-                        <p class="reviews__text"></p>
+                <div class="reviews__avatar" style="background:url(reviews-avatar-8.png);background-position: 50%;background-size: cover;">
+                   <div class="reviews__content">        
+                        <h2 class="reviews__name">Константин Спилберг</h2>
+                        <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...
+                        Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                         <a href="" class="reviews__more-link">подробнее</a>
+                    </div>
                 </div>
             </li>
         </ul>
     </section>
+    <section class="our-work section">
+        КАК мы РАБОТАЕМ
+    </section>
+    <section class="delivery section">
+      ДОСТАВКА
+    </section>
+    <section class="map section">
+       КАРТА И ФУТЕР
+      </section>
+
+    <aside class="section-change">
+        <ul class="change__list">
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+            <li class="change__item"><a href="#" class="change__link"></a></li>
+        </ul>
+    </aside>
 </body>
 </html>

@@ -20,6 +20,18 @@ $orange_head:#f9b43b;
     line-height: 85px;
     text-transform: uppercase; 
 }
+%button{
+    border-radius: 5px;
+    width: 120px;
+    display: block;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    color:white
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -35,18 +47,23 @@ $orange_head:#f9b43b;
 //     font-style: normal;
 // }
 
-
+.section{
+    height: 100vh;
+    min-height: 650px;
+}
 .welcome{
     background:url('welcome-background.png') center center no-repeat;
+    background-size: cover;
     width:100%;
     height: 100vh;
     display: flex;
     color:white;
 }
-.welcome-container{
+.container{
     // width:1100px;
     // margin: 0 auto;
-    padding: 0 113px;
+    width: 940px;
+    margin: 0 auto;
 }
 .logo{
     background:url('icons/logo.svg') center center no-repeat ;
@@ -54,7 +71,7 @@ $orange_head:#f9b43b;
     height:80px;
     transform: scale(1.1);
 }
-.navbar{
+.header{
     display: flex;
     color:white;
     justify-content: space-between;
@@ -84,10 +101,10 @@ $orange_head:#f9b43b;
         }
     }
 }
-.welcome-content{
+.welcome__content{
     background:pink;    
     display: flex;
-    .burger-image{
+    .welcome__content-image{
         transform: scale(0.84);
         background:black;
         // background:url('icons/drops.svg') center no-repeat;
@@ -104,7 +121,7 @@ $orange_head:#f9b43b;
             transform: scale(1.45);
         }
     }
-    .welcome-content__text{
+    .welcome__content-text{
         background: brown;
         display: flex;
         flex-direction: column;
@@ -128,19 +145,12 @@ $orange_head:#f9b43b;
 
 .navbar__order-link{
     background-color:$orange_button;
-    border-radius: 5px;
-    width: 120px;
-    display: block;
-    height: 44px;
-    text-align: center;
-    line-height: 44px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 15px;
+    @extend %button;
 }
 
 .section-change{   
     position: fixed;
+    z-index: 1000;
     top: 123px;
     right: 82px;
     .change__list{
@@ -182,10 +192,12 @@ $orange_head:#f9b43b;
     width:50px;
     height: 50px;
     margin: 0 auto;
+    display: block;
 }
 
 .we-best{
     background:url('we-best-background.png') center center no-repeat;
+    background-size: cover;
     width:100%;
     height: 100vh;
     color:black;
@@ -233,16 +245,116 @@ $orange_head:#f9b43b;
     .reviews__list{
         display: flex;
         flex-wrap: wrap;
-        @each $pos in (1,2,3,4,5,6,7,8) {
+        // @each $pos in (1,2,3,4,5,6,7,8) {
             .reviews__item{
                 list-style: none;
                 width:25%;
                 height: 50vh;
                 .reviews__avatar{
+                    filter: grayscale(1);
                     width: 100%;
                     height: 100%;
+                    // background-size: cover;
+                    // background-position: 50%;
+                    .reviews__content{
+                        filter: grayscale(0);
+                        background-color:rgba(0,0,0,0.5);
+                        display: flex;
+                        flex-direction: column;
+                        padding-left:30px;
+                        padding-right:50px;
+                         opacity: 0;
+                        width: 100%;
+                        height: 100%;
+                        justify-content: center;
+                        color:white;
+                        &:hover{
+                            opacity: 1;
+                        }
+                        .reviews__text{
+                            font-family:'Ubuntu',sans-serif;
+                            font-weight: lighter;
+                            font-size: 17px;
+                            line-height: 24px;
+                            padding-bottom: 30px;
+                        }
+                        .reviews__name{
+                            font-family:'Gagalin',sans-serif;
+                            text-transform: uppercase;
+                            font-size: 17px;
+                            padding-bottom: 30px;
+                        }
+                        .reviews__more-link{
+                          @extend %button;
+                          background-color: #2f3234;
+                          width: 130px;
+                        }
+                    }
                 }
             }
-        }
+        // }
     }
+}
+
+.burger-slider{
+    width:100%;
+    height: 100vh;
+    background: orange;
+    color:red;
+    text-align: center;
+  
+
+}
+.team{
+    width:100%;
+    height: 100vh;
+    background: pink;
+    color:red;
+    text-align: center;
+}
+.menu{
+    width:100%;
+    height: 100vh;
+    background: green;
+    color:red;
+    display: flex;
+    background:url('menu-background.png');
+    background-size: cover;
+    .menu__header{
+        @extend %section-header;
+        color:white;
+        padding-left: 9%;
+        // background: #000;
+        height: 40vh;
+        display: flex;
+        align-items: flex-end;
+        background: #000;
+        flex:4;
+    }
+    .menu__nav{
+        background: red;
+        list-style: none;
+        flex:1;
+    }
+}
+.our-work{
+    width:100%;
+    height: 100vh;
+    background: lightcoral;
+    color:red;
+    text-align: center;
+}
+.delivery{
+    width:100%;
+    height: 100vh;
+    background: lightseagreen;
+    color:red;
+    text-align: center;
+}
+.map{
+    width:100%;
+    height: 100vh;
+    background: lightskyblue;
+    color:red;
+    text-align: center;
 }
