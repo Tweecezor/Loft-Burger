@@ -1,5 +1,5 @@
 .we-best{
-    background:url('best-background.png') center center / cover no-repeat;
+    background:url('../backgrounds/best-background.png') center center / cover no-repeat;
 }
 .we-best__list{
     display: flex;
@@ -19,25 +19,25 @@
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    }
-    .advantages__desc{
-        text-align: center;
-    }
-    .advantages__caption{
+}
+.advantages__desc{
+    text-align: center;
+    h2{
         font-family: 'lifehack', sans-serif;
         font-size: 24px;
         font-weight: 500; 
         margin-bottom: 10px;
     }
-    .advantages__text{
+    p{
         font-family: 'Ubuntu', sans-serif;
         font-weight: 300;
         font-size: 14px;
         line-height: 1.5;
+    }
 }
 .we-best__title{
     color:black;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 // .we-best{

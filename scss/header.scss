@@ -15,12 +15,12 @@
     background-color:$orange_button;
     margin-left: 15px;
 }
-.menu__list{
+.nav__list{
     display: flex;
     align-items: center;
     list-style: none;
 }
-.menu__item{
+.nav__item{
     margin-right: 16px;
     display: flex;
     align-items: center;
@@ -40,18 +40,18 @@
 
     }
 }
-.menu__link{
+.nav__link{
     font-size: 13px;
     color:white;
     text-transform: uppercase;
     text-decoration: none;
 }
-.logo{
-    background:url('icons/logo.svg') center center no-repeat ;
-    width:100px;
-    height:80px;
-    //transform: scale(1.1);
-}
+// .logo{
+//     background:url('icons/logo.svg') center center no-repeat ;
+//     width:100px;
+//     height:80px;
+//     //transform: scale(1.1);
+// }
 // .btn{
     //     @extend %button;
     // }

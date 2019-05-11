@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'lifehack';
-  src: local(Lifehack), url("fonts/lifehack/lifehack_medium-webfont.woff2") format("woff2");
+  src: local(Lifehack), url("../fonts/lifehack/lifehack_medium-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'gagalin';
-  src: local(gagalin), url("fonts/Gagalin/gagalin-regular-webfont.woff2") format("woff2");
+  src: local(gagalin), url("../fonts/Gagalin/gagalin-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 * {
@@ -14,9 +14,17 @@
   padding: 0;
   font-family: 'Ubuntu', sans-serif; }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body, html {
+  height: 100%; }
+
 .section {
   height: 100vh;
-  min-height: 650px; }
+  min-height: 650px;
+  background-size: cover; }
 
 .container {
   width: 1100px;
@@ -44,7 +52,7 @@ footer {
   width: 100%; }
 
 .welcome {
-  background: url("welcome-background.png") center center no-repeat;
+  background: url("../backgrounds/welcome-background.png") center center no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -75,9 +83,6 @@ footer {
   text-transform: lowercase; }
 
 .scroll-down-arrow {
-  background: url("icons/arrow-scroll.svg") center center no-repeat;
-  width: 50px;
-  height: 50px;
   display: block;
   position: absolute;
   bottom: 5%;
@@ -96,11 +101,15 @@ footer {
   list-style: none;
   width: 25%;
   height: 50vh; }
+  .reviews__item:nth-child(2) .reviews__avatar {
+    background-position: 80%; }
 
 .reviews__avatar {
   filter: grayscale(1);
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background-position: 50%;
+  background-size: cover; }
 
 .reviews__content {
   filter: grayscale(0);
@@ -135,7 +144,7 @@ footer {
   width: 110px; }
 
 .we-best {
-  background: url("best-background.png") center center/cover no-repeat; }
+  background: url("../backgrounds/best-background.png") center center/cover no-repeat; }
 
 .we-best__list {
   display: flex;
@@ -157,22 +166,20 @@ footer {
 
 .advantages__desc {
   text-align: center; }
-
-.advantages__caption {
-  font-family: 'lifehack', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px; }
-
-.advantages__text {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5; }
+  .advantages__desc h2 {
+    font-family: 'lifehack', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px; }
+  .advantages__desc p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5; }
 
 .we-best__title {
   color: black;
-  padding-bottom: 100px; }
+  margin-bottom: 100px; }
 
 .change__list {
   position: fixed;
@@ -226,20 +233,20 @@ footer {
   background-color: #e45028;
   margin-left: 15px; }
 
-.menu__list {
+.nav__list {
   display: flex;
   align-items: center;
   list-style: none; }
 
-.menu__item {
+.nav__item {
   margin-right: 16px;
   display: flex;
   align-items: center; }
-  .menu__item:last-child {
+  .nav__item:last-child {
     margin-right: 0; }
-    .menu__item:last-child:after {
+    .nav__item:last-child:after {
       display: none; }
-  .menu__item:after {
+  .nav__item:after {
     content: '';
     width: 4px;
     height: 4px;
@@ -247,16 +254,11 @@ footer {
     border-radius: 50%;
     margin-left: 15px; }
 
-.menu__link {
+.nav__link {
   font-size: 13px;
   color: white;
   text-transform: uppercase;
   text-decoration: none; }
-
-.logo {
-  background: url("icons/logo.svg") center center no-repeat;
-  width: 100px;
-  height: 80px; }
 
 .btn {
   border-radius: 5px;
@@ -275,5 +277,136 @@ footer {
   text-transform: uppercase; }
   .section-title--centered {
     text-align: center; }
+
+.menu {
+  display: flex;
+  background: url("../backgrounds/menu-background.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  justify-content: flex-end; }
+
+.menu__header {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  color: white; }
+
+.menu__nav {
+  list-style: none;
+  display: flex; }
+
+.assortment:nth-child(1) .assortment__item {
+  background: url("../image/menu-list-1.png");
+  background-size: cover;
+  width: 80px;
+  height: 100%; }
+
+.assortment:nth-child(2) .assortment__item {
+  background: url("../image/menu-list-2.png");
+  background-size: cover;
+  width: 80px;
+  height: 100%; }
+
+.assortment:nth-child(3) .assortment__item {
+  background: url("../image/menu-list-3.png");
+  background-size: cover;
+  width: 80px;
+  height: 100%; }
+
+.assortment {
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+.assortment:hover .assortment__submenu {
+  animation: submenu_width 2s;
+  animation-fill-mode: forwards; }
+
+@keyframes submenu_width {
+  0% {
+    width: 0; }
+  100% {
+    width: 540px; } }
+.assortment__submenu {
+  width: 0px;
+  overflow: hidden;
+  background-color: rgba(47, 50, 52, 0.93);
+  color: white;
+  height: 100%; }
+  .assortment__submenu-text {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Ubuntu' ,serif;
+    padding: 0 30px; }
+
+.team {
+  background-image: url("../backgrounds/team-background.png"); }
+
+.team__content {
+  position: absolute;
+  left: 50%;
+  width: 50vw;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.93);
+  padding-left: 95px; }
+
+.team__title {
+  color: #f9b43b;
+  margin-bottom: 55px; }
+
+.team__item {
+  margin-bottom: 35px; }
+  .team__item:last-child {
+    margin-bottom: 0; }
+
+.personal__name {
+  font-size: 14px;
+  font-family: 'gagalin', sans-serif;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 15px; }
+  .personal__name:before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 5px; }
+
+.personal__submenu {
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  font-size: 14px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif; }
+  .personal__submenu .personal__position {
+    font-weight: 700;
+    padding-bottom: 25px; }
+  .personal__submenu .personal__desc {
+    font-weight: 300; }
+
+@keyframes submenu_height {
+  100% {
+    height: 100px; } }
+.personal__name:hover + .personal__submenu {
+  height: 100px;
+  transition: 1s; }
+
+.personal__avatar {
+  margin-right: 20px; }
+
+.personal__img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px; }
+
+.personal__text {
+  width: 208px;
+  line-height: 24px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,11 +10,19 @@
     list-style: none;
     width:25%;
     height: 50vh;
+    &:nth-child(2){
+       .reviews__avatar{
+            background-position: 80%;
+       }
+    }
 }
 .reviews__avatar{
     filter: grayscale(1);
     width: 100%;
     height: 100%;
+    background-position: 50%;
+    background-size: cover;
+   
 }
 .reviews__content{
     filter: grayscale(0);
