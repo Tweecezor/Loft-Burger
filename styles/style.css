@@ -79,7 +79,8 @@ img {
   align-items: center; }
 
 .welcome__content-image {
-  padding: 0 15px; }
+  padding: 0 15px;
+  position: relative; }
 
 .welcome__content-text {
   display: flex;
@@ -96,6 +97,11 @@ img {
   font-size: 65px;
   line-height: 1;
   text-transform: lowercase; }
+
+.burger-drops {
+  position: absolute;
+  top: 18%;
+  left: 0; }
 
 .scroll-down-arrow {
   display: block;

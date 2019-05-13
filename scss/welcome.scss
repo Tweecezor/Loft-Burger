@@ -10,11 +10,11 @@
 .welcome__content{
     flex:.7;
     display: flex;
-   align-items: center;
-    
+   align-items: center; 
 }
 .welcome__content-image{
     padding: 0 15px;
+    position: relative;
  }
  .welcome__content-text{
      display: flex;
@@ -35,7 +35,11 @@
        
         // background: #000;
  }
-
+ .burger-drops{
+     position: absolute;
+     top: 18%;
+     left:0;
+ }
 .scroll-down-arrow{
    // background:url('icons/arrow-scroll.svg') center center no-repeat;
     // width:50px;
