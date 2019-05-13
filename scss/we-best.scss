@@ -1,0 +1,83 @@
+.we-best{
+    background:url('../image/backgrounds/best-background.png') center center / cover no-repeat;
+}
+.we-best__list{
+    display: flex;
+    list-style:none;
+}
+.we-best__item{
+    flex:1;
+    margin-right: 10px;
+    &:last-child{
+        margin-right: 0;
+    }
+ }
+.we-best-container{
+    justify-content: center;
+}
+.advantages__img{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+.advantages__desc{
+    text-align: center;
+    h2{
+        font-family: 'lifehack', sans-serif;
+        font-size: 24px;
+        font-weight: 500; 
+        margin-bottom: 10px;
+    }
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+.we-best__title{
+    color:black;
+    margin-bottom: 100px;
+}
+
+// .we-best{
+//     background:url('best-background.png') center center no-repeat;
+//     background-size: cover;
+//     width:100%;
+//     height: 100vh;
+//     color:black;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 0 95px;
+//     .we-best__title{
+//         color:black;
+//         @extend %section-header;
+//         padding-bottom: 100px;
+//     }
+//     .advantages{
+//         display: flex;
+//         list-style: none;
+//         .advantages__item{
+//             display: flex;
+//             flex-direction: column;
+//             width:33%;
+//             justify-content: space-between;
+//             text-align: center;
+//             .advantages__img{
+//                 padding-bottom: 40px;
+//             }
+//             .advantages__caption{
+//                 font-family: 'lifehack', sans-serif;
+//                 font-size: 30px;
+              
+//             }
+//             .advantages__text{
+//                 font-family: 'Ubuntu', sans-serif;
+//                 font-weight: 300;
+//                 font-size: 17px;
+//             }
+//         }
+//     }
+// }

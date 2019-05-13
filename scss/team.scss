@@ -1,0 +1,102 @@
+.team{
+    background-image: url('../image/backgrounds/team-background.png');
+    position: relative;
+}
+.team__content{
+    position: absolute;
+    left:50%;
+    width: 50vw;
+    height: 100%;
+    background-color:rgba(47,50,52,0.93);
+    padding-left:95px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.team__title{
+   color:$orange_head;
+   margin-bottom: 55px;
+}
+.team__item{
+    margin-bottom: 35px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.personal__name{
+    font-size: 14px;
+    font-family:'gagalin', sans-serif;
+    color:white;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 15px;
+    &:before{
+        // content: '';
+        // width: 7px;
+        // height: 7px;
+        // background: white;
+        // border-radius: 50%;
+        position: absolute;
+        left:-15px;
+        top:0px;
+        content: '\25b2';
+        display: block;
+        width: 7px;
+        height: 7px;
+        margin-right: 0px;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+   &--active{
+        color:$orange_head;
+        &:before{
+            content:'\25bc';
+            top:2px;
+        }
+   }
+ 
+}
+
+.personal__submenu{
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    font-size: 14px;
+    color:white;
+    font-family:'Ubuntu', sans-serif;
+    .personal__position{
+        font-weight: 700;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+    .personal__desc{
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+@keyframes submenu_height{
+    100%{
+        height: 100px;
+    }
+}
+.personal__submenu--active{
+  // animation: submenu_height 1s;
+    height: 110px;
+   transition: 1s; 
+}
+.personal__avatar{
+    margin-right: 20px;
+}
+.personal__img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.personal__text{
+    width: 208px;
+    line-height: 24px;
+  
+    
+}
+

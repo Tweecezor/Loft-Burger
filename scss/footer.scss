@@ -1,0 +1,34 @@
+.footer{
+    width: 100%;
+    background: #000;
+    position: absolute;
+    bottom: 0%;
+    color:white; 
+    padding:11px 0px;  
+    display: flex;
+    justify-content: space-between; 
+   
+}
+.contacts{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+}
+.contacts__address{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.contacts__tel{
+    font-weight: 700;
+    text-decoration: none;
+    color:$orange_button;
+}
+.social__list{
+    display: flex;
+    align-items: center;
+}
+.social__item{
+    margin-right: 20px;
+    &:last-child{
+        margin-right: 0;
+    }
+}

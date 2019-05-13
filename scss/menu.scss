@@ -1,0 +1,115 @@
+.menu{
+    display: flex;
+    background:url('../image/backgrounds/menu-background.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    justify-content: flex-end;
+    //background-size: cover;
+}
+ .menu__header{
+//     color:white;
+//     padding-left: 9%;
+//     // background: #000;
+//     height: 40vh;
+//     display: flex;
+//     align-items: flex-end;
+//     background: #000;
+//     width: 82%;
+    position: absolute;
+    left:10%;
+    top:30%;
+    color:white;
+}
+.menu__nav{
+    //background: red;
+    list-style: none;
+    //width: 18%;
+    display: flex;
+  
+   // height: 100%;
+}
+// @each $pos in (1,2,3) {
+//     .assortment:nth-child(#{$pos}){
+//         .assortment__item{
+//             background:url('../image/menu-list-#{$pos}.png');
+//             background-size: cover;
+//             //width: 33.333333%;
+//             width:80px;
+//             height: 100%;
+//         }
+//     }
+// }
+.assortment{
+     display: flex;
+    // align-items: center;
+   
+}
+
+.assortment__item{
+    display: flex;
+    justify-content: flex-end;
+    width:80px;
+    height: 100%;
+    background-size: cover;
+    cursor: pointer;
+    span{
+        font-family: 'gagalin';
+        font-size: 40px;
+        white-space: nowrap;
+          transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+        width:inherit;
+        color:white;
+        height: inherit;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+
+
+        @keyframes submenu_width{
+            0%{
+                width:0;
+            }
+            // 25%{
+            //     width:130px;
+            // }
+
+            // 50%{
+            //     width:260px;
+            // }
+
+            // 75%{
+            //     width:390px;
+            // }
+
+            100%{
+                width:540px;
+            }
+        }
+
+.assortment__submenu{
+    width: 0px;
+    overflow: hidden;
+    background-color:rgba(47,50,52,0.93);
+    color: white;
+    height: 100%;
+    &-text{
+        font-size: 14px;
+        font-weight: 300;font-family:'Ubuntu' ,serif;
+        padding: 0 33px;
+        padding-top:60px;
+        line-height: 24px;
+    }
+}
+.assortment__submenu--active{
+    width:540px;   
+//    animation: submenu_width 2s; 
+    //transition: 1s;
+    // animation-fill-mode: forwards;
+}
+
+
