@@ -1,5 +1,5 @@
 .welcome{
-    background:url('../backgrounds/welcome-background.png') center center no-repeat;
+    background:url('../image/backgrounds/welcome-background.png') center center no-repeat;
     background-size: cover;
     width:100%;
     height: 100vh;
@@ -8,9 +8,9 @@
     position: relative;
 }
 .welcome__content{
-    //flex:.8;
+    flex:.7;
     display: flex;
-   // align-items: center;
+   align-items: center;
     
 }
 .welcome__content-image{

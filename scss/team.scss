@@ -1,5 +1,6 @@
 .team{
-    background-image: url('../backgrounds/team-background.png');
+    background-image: url('../image/backgrounds/team-background.png');
+    position: relative;
 }
 .team__content{
     position: absolute;
@@ -8,6 +9,9 @@
     height: 100%;
     background-color:rgba(47,50,52,0.93);
     padding-left:95px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
 }
 .team__title{
    color:$orange_head;
@@ -27,15 +31,30 @@
     cursor: pointer;
     padding-bottom: 15px;
     &:before{
-        content: '';
+        // content: '';
+        // width: 7px;
+        // height: 7px;
+        // background: white;
+        // border-radius: 50%;
+        position: absolute;
+        left:-15px;
+        top:0px;
+        content: '\25b2';
+        display: block;
         width: 7px;
         height: 7px;
-        background: white;
-        border-radius: 50%;
-        position: absolute;
-        left:-10px;
-        top:5px;
+        margin-right: 0px;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
     }
+   &--active{
+        color:$orange_head;
+        &:before{
+            content:'\25bc';
+            top:2px;
+        }
+   }
+ 
 }
 
 .personal__submenu{
@@ -48,10 +67,12 @@
     font-family:'Ubuntu', sans-serif;
     .personal__position{
         font-weight: 700;
-        padding-bottom: 25px;
+        padding-bottom: 10px;
+        font-size: 14px;
     }
     .personal__desc{
         font-weight: 300;
+        font-size: 14px;
     }
 }
 @keyframes submenu_height{
@@ -59,9 +80,9 @@
         height: 100px;
     }
 }
-.personal__name:hover + .personal__submenu{
+.personal__submenu--active{
   // animation: submenu_height 1s;
-    height: 100px;
+    height: 110px;
    transition: 1s; 
 }
 .personal__avatar{
@@ -75,4 +96,7 @@
 .personal__text{
     width: 208px;
     line-height: 24px;
+  
+    
 }
+

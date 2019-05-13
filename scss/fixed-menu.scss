@@ -23,7 +23,7 @@
         left:50%;
         transform: translate(-50%,-50%);
     }
-    &:hover{
+    &-active{
         &:before{
             content:'';
             width:17px;
@@ -40,3 +40,4 @@
         }
     }
 }
+

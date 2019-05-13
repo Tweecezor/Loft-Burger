@@ -1,6 +1,6 @@
 .menu{
     display: flex;
-    background:url('../backgrounds/menu-background.png') center center no-repeat;
+    background:url('../image/backgrounds/menu-background.png') center center no-repeat;
     background-size: cover;
     position: relative;
     justify-content: flex-end;
@@ -28,36 +28,47 @@
   
    // height: 100%;
 }
-@each $pos in (1,2,3) {
-    .assortment:nth-child(#{$pos}){
-        .assortment__item{
-            background:url('../image/menu-list-#{$pos}.png');
-            background-size: cover;
-            //width: 33.333333%;
-            width:80px;
-            height: 100%;
-        }
-    }
-}
+// @each $pos in (1,2,3) {
+//     .assortment:nth-child(#{$pos}){
+//         .assortment__item{
+//             background:url('../image/menu-list-#{$pos}.png');
+//             background-size: cover;
+//             //width: 33.333333%;
+//             width:80px;
+//             height: 100%;
+//         }
+//     }
+// }
 .assortment{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    // span{
-    //     transform: rotate(90deg);
-    //     font-family: 'gagalin',sans-serif;
-    //     font-size: 40px;
-    //     color:white;
-    //     width: 100%;
-    // }
+     display: flex;
+    // align-items: center;
+   
 }
 
-       .assortment:hover .assortment__submenu{
-           // width:540px;   
-           animation: submenu_width 2s; 
-            //transition: 1s;
-            animation-fill-mode: forwards;
-        }
+.assortment__item{
+    display: flex;
+    justify-content: flex-end;
+    width:80px;
+    height: 100%;
+    background-size: cover;
+    cursor: pointer;
+    span{
+        font-family: 'gagalin';
+        font-size: 40px;
+        white-space: nowrap;
+          transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+        width:inherit;
+        color:white;
+        height: inherit;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+
 
         @keyframes submenu_width{
             0%{
@@ -89,9 +100,16 @@
     &-text{
         font-size: 14px;
         font-weight: 300;font-family:'Ubuntu' ,serif;
-        padding: 0 30px;
+        padding: 0 33px;
+        padding-top:60px;
+        line-height: 24px;
     }
 }
-
+.assortment__submenu--active{
+    width:540px;   
+//    animation: submenu_width 2s; 
+    //transition: 1s;
+    // animation-fill-mode: forwards;
+}
 
 
