@@ -3,13 +3,13 @@
 }
 .delivery__title{
     color:$orange_head;
-    margin-bottom: 44px;
+    margin-bottom: 2.75rem;
 }
 .delivery__form{
     color:white;
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
 }
 .delivery__data{
@@ -18,20 +18,20 @@
 }
 .delivery__input{
     border:none;
-    height: 35px;
-    border-radius:5px;
+    height: 2.1875rem;
+    border-radius:0.3125rem;
     border: 1px solid #d1cfcb;
     &--222px{
-        width: 222px;
+        width: 13.875rem;
     }
     &--460px{
-        width: 460px;
+        width: 28.75rem;
     }
     &--100px{
-        width: 100px;
+        width: 6.25rem;
     }
     &:active,&:hover{
-        border: 2px solid #f9b43b;
+        border: 0.125rem solid #f9b43b;
         transition: 0.4s;
     }
  
@@ -43,21 +43,21 @@
 .delivery__data_container{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     &:last-child{
         margin-bottom: 0;
     }
 }
 .delivery__text{
-    width: 460px;
-    height: 110px;
-    border: 1px solid #d1cfcb;
-    border-radius:5px;
+    width: 28.75rem;
+    height: 6.875rem;
+    border: 0.0625rem solid #d1cfcb;
+    border-radius:0.3125rem;
 }
 .delivery__data_elem{
-    margin-bottom: 29px;
+    margin-bottom: 1.8125rem;
     label{
-        padding-left: 25px;
+        padding-left: 1.5625rem;
 
     }
 }
@@ -74,24 +74,24 @@
     text-transform: capitalize;
 }
 .delivery__text{
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     resize: none;
 }
 .delivery__field{
-    margin-bottom: 9px;
+    margin-bottom: 0.5625rem;
 }
 .delivery__visually-hidden{
     display: none;
 }
 .delivery__change{
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 .delivery__radio-label{
     position: relative;
     &:before{
         content:'';
-        width: 15px;
-        height: 15px;
+        width: 0.9375rem;
+        height: 0.9375rem;
         border-radius: 50%;
         background: white;
         position: absolute;
@@ -102,8 +102,8 @@
     &:checked + .delivery__radio-label{
         &:after{
             content: '';
-            width: 7px;
-            height: 7px;
+            width: 0.4375rem;
+            height: 0.4375rem;
             border-radius: 50%;
             background-color: #e35028;
             position: absolute;
@@ -116,8 +116,8 @@
     position: relative;
     &:before{
         content:'';
-        width: 15px;
-        height: 15px;
+        width: 0.9375rem;
+        height: 0.9375rem;
         background: white;
         position: absolute;
         left: 0%;
@@ -127,8 +127,8 @@
     &:checked + .delivery__checkbox-label{
         &:after{
             content: '';
-            width: 12px;
-            height: 10px;
+            width: 0.75rem;
+            height: 0.625rem;
             background:url('../icons/checked.png') no-repeat;
             position: absolute;
             // left: 3%;
