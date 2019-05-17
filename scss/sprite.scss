@@ -1,0 +1,48 @@
+.phone-icon{
+    width: 11px;
+    height: 11px;
+    fill:$orange_button
+}
+.scroll-down{
+    width: 30px;
+    height: 30px;
+    fill:white;
+}
+.logo{
+    width: 98px;
+    height: 74px;
+}
+.sprite{
+    display: block;
+}
+.meat{
+    width: 97px;
+    height: 90px;
+    fill: #E35028
+}
+.hand{
+    width: 97px;
+    height: 90px;
+    fill: #F9B43B;
+}
+.natural{
+    width: 97px;
+    height: 90px;
+    fill:#8BC03F;
+}
+.social_icon{
+    width:20px;
+    height: 20px;
+    fill: #585858;
+    transition: 1s;
+    &:hover{
+        fill:white;
+        transition: 1s;
+    }
+}
+.drops{
+    width: 430px;
+    height: 400px;
+    position: absolute;
+    top:0;
+}
