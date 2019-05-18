@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
@@ -15,9 +15,11 @@
             <div class="container">
                 <header class="header">
                     <!-- <img src="icons/logo.svg" class="logo"> -->
-                    <svg class="sprite logo">
-                        <use xlink:href="icons/sprite.svg#logo"></use>
-                    </svg>
+                    <div class="header__logo">
+                        <svg class="sprite logo">
+                            <use xlink:href="icons/sprite.svg#logo"></use>
+                        </svg>
+                    </div>
                     <div class="header__buttons">
                         <nav class="nav">
                             <ul class="nav__list">
@@ -45,6 +47,10 @@
                             </ul>
                         </nav>
                         <a href="#" class="btn header__order-btn">Заказать</a>
+                        <a class="hamburger-menu-link" href="">
+                                <div class="hamburger-menu-link__bars"></div>
+                              </a>
+                        <!-- <div class="header__burger-menu"><a href=""></a></div> -->
                     </div>
                 </header>
                 <div class="welcome__content">
@@ -314,65 +320,140 @@
         <section class="delivery section">  
             <div class="container container--delivery">
                 <h1 class="delivery__title section-title section-title--centered">Закажите Доставку</h1>
-                <form class="delivery__form" action="">
-                    <div class="delivery__data">
-                        <div class="delivery__data_container">
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="name">Имя</label>
-                                <input id='name' type="text" class="delivery__name delivery__input delivery__input--222px">
+                <!-- <form class="delivery__form-tag" action="">
+                    <div class="delivery__form">
+                        <div class="delivery__data">
+                            <div class="delivery__data_container">
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="name">Имя</label>
+                                    <input id='name' type="text" class="delivery__name delivery__input delivery__input--222px">
+                                </div>
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="tel">Телефон</label>
+                                    <input id='tel' type="text" class="delivery__tel delivery__input delivery__input--222px">
+                                </div>
                             </div>
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="tel">Телефон</label>
-                                <input id='tel' type="text" class="delivery__tel delivery__input delivery__input--222px">
+                            <div class="delivery__data_container">
+                                <div class="delivery__data_label">   
+                                    <label class="delivery__field" for="street">Улица</label>
+                                    <input id='street' type="text" class="delivery__street delivery__input delivery__input--460px">
+                                </div>
+                            </div>
+                            <div class="delivery__data_container">
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="house">Дом</label>
+                                    <input id='house' type="text" class="delivery__house delivery__input delivery__input--100px">
+                                </div>  
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="corpus">Корпус</label>
+                                    <input id='corpus' type="text" class="delivery__corpus delivery__input delivery__input--100px">
+                                </div>
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="appart">Квартира</label>
+                                    <input id='appart' type="text" class="delivery__appart delivery__input delivery__input--100px">
+                                </div>
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="floor">Этаж</label>
+                                    <input id='floor' type="text" class="delivery__floor delivery__input delivery__input--100px">
+                                </div>
                             </div>
                         </div>
-                        <div class="delivery__data_container">
-                            <div class="delivery__data_label">   
-                                <label class="delivery__field" for="street">Улица</label>
-                                <input id='street' type="text" class="delivery__street delivery__input delivery__input--460px">
-                            </div>
-                        </div>
-                        <div class="delivery__data_container">
+                        <div class="delivery__data">
                             <div class="delivery__data_label">
-                                <label class="delivery__field" for="house">Дом</label>
-                                <input id='house' type="text" class="delivery__house delivery__input delivery__input--100px">
-                            </div>  
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="corpus">Корпус</label>
-                                <input id='corpus' type="text" class="delivery__corpus delivery__input delivery__input--100px">
+                                <label class="delivery__field" for="text">Комментарий</label>
+                                <textarea name="textarea" id="" class="delivery__text" id="text"></textarea>
                             </div>
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="appart">Квартира</label>
-                                <input id='appart' type="text" class="delivery__appart delivery__input delivery__input--100px">
+                            <div class="delivery__data_elem">
+                                <input type="radio" name="pay" id="change" class="delivery__visually-hidden delivery__radio">
+                                <label for="change" class="delivery__radio-label delivery__change">Потребуется сдача</label>
+                                <input type="radio" name="pay" id="paycard" class="delivery__visually-hidden delivery__radio">
+                                <label for="paycard" class="delivery__radio-label">Оплата картой</label>
                             </div>
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="floor">Этаж</label>
-                                <input id='floor' type="text" class="delivery__floor delivery__input delivery__input--100px">
+                            <div class="delivery__data_elem">
+                                <input type="checkbox"id="recall" class="delivery__checkbox delivery__visually-hidden">
+                                <label for="recall" class="delivery__checkbox-label">Не перезванивать</label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="delivery__info">
-                        <div class="delivery__data_label">
-                            <label class="delivery__field" for="text">Комментарий</label>
-                            <textarea name="textarea" id="" class="delivery__text" id="text"></textarea>
-                        </div>
-                        <div class="delivery__data_elem">
-                            <input type="radio" name="pay" id="change" class="delivery__visually-hidden delivery__radio">
-                            <label for="change" class="delivery__radio-label delivery__change">Потребуется сдача</label>
-                            <input type="radio" name="pay" id="paycard" class="delivery__visually-hidden delivery__radio">
-                            <label for="paycard" class="delivery__radio-label">Оплата картой</label>
-                        </div>
-                        <div class="delivery__data_elem">
-                            <input type="checkbox"id="recall" class="delivery__checkbox delivery__visually-hidden">
-                            <label for="recall" class="delivery__checkbox-label">Не перезванивать</label>
-                        </div>
-                         <div class="delivery__data_button">
-                           <button type="submit" class="btn delivery__order">Заказать</button>
-                           <button type="reset" class="btn delivery__reset">Очистить</button>
+                            <div class="delivery__data_button">
+                            <button type="submit" class="btn delivery__order">Заказать</button>
+                            <button type="reset" class="btn delivery__reset">Очистить</button>
 
+                            </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
+                <div class="order__form">
+              <form class="order__form-tag" id="order-form">
+                <div class="order__form-col">
+                  <div class="order__form-row order__form-row_double">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Имя</div>
+                      <input class="order__form-input" name="name" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Телефон</div>
+                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                    </label>
+                  </div>
+                  <div class="order__form-row">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Улица</div>
+                      <input class="order__form-input" name="street" type="text" placeholder="">
+                    </label>
+                  </div>
+                  <div class="order__form-row order__form-row_quatro">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Дом</div>
+                      <input class="order__form-input" name="home" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Корпус</div>
+                      <input class="order__form-input" name="part" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Квартира</div>
+                      <input class="order__form-input" name="appt" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Этаж</div>
+                      <input class="order__form-input" name="floor" type="text" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="order__form-col">
+                  <div class="order__form-row">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Комментарий</div>
+                      <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                    </label>
+                  </div>
+                  <div class="order__form-buttons">
+                    <div class="order__form-row">
+                      <label class="order__radio">
+                        <input class="order__radio-elem" name="payment" type="radio">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Потребуется сдача</div>
+                      </label>
+                      <label class="order__radio">
+                        <input class="order__radio-elem" name="payment" type="radio">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Оплата по карте</div>
+                      </label>
+                    </div>
+                    <div class="order__form-row">
+                      <label class="order__radio order__radio_checkbox">
+                        <input class="order__radio-elem" name="callback" type="checkbox">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Не перезванивать</div>
+                      </label>
+                    </div>
+                    <div class="order__form-row">
+                      <input class="order__form-button" name="" type="submit" value="Заказать">
+                      <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
             </div>
         </section>
         <section class="map section">

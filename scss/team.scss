@@ -12,6 +12,12 @@
     display: flex;
     flex-direction: column; 
     justify-content: center;
+    @include tablets{
+        width: 100vw;
+        left:0;
+        align-items:center;
+        padding-left: 0;
+    }
 }
 .team__title{
    color:$orange_head;
@@ -22,6 +28,9 @@
     &:last-child{
         margin-bottom: 0;
     }
+    @include tablets{
+        text-align:center;
+    }
 }
 .personal__name{
     font-size: 0.875rem;
@@ -30,6 +39,9 @@
     position: relative;
     cursor: pointer;
     padding-bottom: 0.9375rem;
+    @include tablets{
+        font-size: 1.5625rem;
+    }
     &:before{
         // content: '';
         // width: 0.4375rem;
@@ -42,18 +54,25 @@
         content: '\25b2';
         display: block;
         width: 0.4375rem;
-        height: 0.4375rem;
+        //height: 0.4375rem;
         margin-right: 0rem;
         -webkit-transform: scale(0.7);
         transform: scale(0.7);
+        @include tablets{
+            left: -1.337rem;
+        }
     }
-   &--active{
+    &--active{
         color:$orange_head;
         &:before{
             content:'\25bc';
             top:0.125rem;
         }
-   }
+    }
+    @include tablets{
+        display: inline-flex;
+
+    }
  
 }
 
@@ -74,6 +93,10 @@
         font-weight: 300;
         font-size: 0.875rem;
     }
+    @include tablets{
+        flex-direction: column;
+        align-items:center;
+    }
 }
 @keyframes submenu_height{
     100%{
@@ -83,10 +106,16 @@
 .personal__submenu--active{
   // animation: submenu_height 1s;
     height: 6.875rem;
-   transition: 1s; 
+    transition: 1s; 
+    @include tablets{
+        height:11.875rem;
+    }
 }
 .personal__avatar{
     margin-right: 1.25rem;
+    @include tablets{
+        margin-right: 0;
+    }
 }
 .personal__img{
     border-radius: 50%;
@@ -96,7 +125,10 @@
 .personal__text{
     width: 13rem;
     line-height: 1.5rem;
-  
+    @include tablets{
+    width: 20rem;
+    line-height: 1.5rem;
+    }
     
 }
 

@@ -25,6 +25,7 @@
     list-style: none;
     //width: 18%;
     display: flex;
+    z-index: 1;
   
    // height: 100%;
 }
@@ -51,6 +52,7 @@
     width:5rem;
     height: 100%;
     background-size: cover;
+    position: relative;
     cursor: pointer;
     span{
         font-family: 'gagalin';
@@ -61,10 +63,12 @@
         width:inherit;
         color:white;
         height: inherit;
-        position: relative;
+       // position: relative;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        //justify-content: flex-end;
+        position: absolute;
+        top:41%;
     }
 }
 
@@ -106,9 +110,12 @@
     }
 }
 .assortment__submenu--active{
-    width:33.75rem;   
+    width:33.75rem; 
+    @include tablets{
+        width: 0;
+    }  
 //    animation: submenu_width 2s; 
-    //transition: 1s;
+    transition: 1s;
     // animation-fill-mode: forwards;
 }
 

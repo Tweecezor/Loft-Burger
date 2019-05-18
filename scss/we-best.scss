@@ -4,10 +4,19 @@
 .we-best__list{
     display: flex;
     list-style:none;
+    @include phones{
+        flex-direction: column;
+    }
+   
 }
 .we-best__item{
     flex:1;
     margin-right: 0.625rem;
+    @include phones{
+        display: flex;
+        flex-direction: row;
+    }
+    
     &:last-child{
         margin-right: 0;
     }
@@ -19,14 +28,21 @@
     margin-bottom: 2.5rem;
     display: flex;
     justify-content: center;
+    @include phones{
+        margin-right: 5%;
+    }
 }
 .advantages__desc{
     text-align: center;
+    @include phones{
+        text-align: left;
+    }
     h2{
         font-family: 'lifehack', sans-serif;
         font-size: 1.5rem;
         font-weight: 500; 
         margin-bottom: 0.625rem;
+        line-height: 1.35rem;
     }
     p{
         font-family: 'Ubuntu', sans-serif;

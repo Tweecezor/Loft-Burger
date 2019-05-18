@@ -5,6 +5,9 @@
     &--centered{
         text-align: center;
     }
+    @include phones{
+        font-size: 3.8rem;
+    }
 }
 // .section-title--centered{
 //     text-align: center;

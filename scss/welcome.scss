@@ -11,16 +11,35 @@
     flex:.7;
     display: flex;
    align-items: center; 
+   @include tablets{
+       flex-direction: column;
+       padding:0 20%;
+   }
+   @include phones{
+    padding:0 15%;
+   }
 }
 .welcome__content-image{
     padding: 0 0.9375rem;
     position: relative;
+    width:50%;
+    @include tablets{
+        width:100%;
+       // padding:0;
+       
+    }
  }
  .welcome__content-text{
      display: flex;
      flex-direction: column;
      justify-content: center;
      padding-top:1.25rem;
+     width:50%;
+     @include tablets{
+        width:100%;
+        text-align:center;
+        padding-top:0;
+    }
  }
  .welcome__content-caption{
      color:$orange_head;
@@ -32,7 +51,9 @@
          font-size:4.0625rem;
          line-height: 1;
          text-transform: lowercase; 
-       
+       @include phones{
+           font-size: 3.375rem;
+       }
         // background: #000;
  }
  .burger-drops{
