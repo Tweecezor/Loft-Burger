@@ -34,6 +34,9 @@ body, html {
   height: 100vh;
   min-height: 650px;
   background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: 0; } }
 
 .container {
   max-width: 940px;
@@ -95,7 +98,7 @@ img {
       padding: 0 20%; } }
   @media screen and (max-width: 480px) {
     .welcome__content {
-      padding: 0 10%; } }
+      padding: 0 9%; } }
 
 .welcome__content-image {
   padding: 0 0.9375rem;
