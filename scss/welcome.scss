@@ -16,7 +16,7 @@
        padding:0 20%;
    }
    @include phones{
-    padding:0 15%;
+    padding:0 10%;
    }
 }
 .welcome__content-image{
@@ -52,7 +52,7 @@
          line-height: 1;
          text-transform: lowercase; 
        @include phones{
-           font-size: 3.375rem;
+           font-size: 3.0rem;
        }
         // background: #000;
  }

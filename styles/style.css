@@ -95,7 +95,7 @@ img {
       padding: 0 20%; } }
   @media screen and (max-width: 480px) {
     .welcome__content {
-      padding: 0 15%; } }
+      padding: 0 10%; } }
 
 .welcome__content-image {
   padding: 0 0.9375rem;
@@ -128,7 +128,7 @@ img {
   text-transform: lowercase; }
   @media screen and (max-width: 480px) {
     .welcome__content-desc {
-      font-size: 3.375rem; } }
+      font-size: 3.0rem; } }
 
 .burger-drops {
   position: absolute;
@@ -394,7 +394,7 @@ img {
     text-align: center; }
   @media screen and (max-width: 480px) {
     .section-title {
-      font-size: 3.8rem; } }
+      font-size: 3.5rem; } }
 
 .menu {
   display: flex;
