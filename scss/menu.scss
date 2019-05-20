@@ -45,6 +45,15 @@
     // align-items: center;
    
 }
+.assortment--active{
+    .assortment__submenu{
+        width:33.75rem; 
+        transition: 1s;
+        @include tablets{
+            width: 0;
+        }  
+    }
+}
 
 .assortment__item{
     display: flex;
@@ -109,14 +118,6 @@
         line-height: 1.5rem;
     }
 }
-.assortment__submenu--active{
-    width:33.75rem; 
-    @include tablets{
-        width: 0;
-    }  
-//    animation: submenu_width 2s; 
-    transition: 1s;
-    // animation-fill-mode: forwards;
-}
+
 
 

@@ -425,6 +425,13 @@ img {
 .assortment {
   display: flex; }
 
+.assortment--active .assortment__submenu {
+  width: 33.75rem;
+  transition: 1s; }
+  @media screen and (max-width: 768px) {
+    .assortment--active .assortment__submenu {
+      width: 0; } }
+
 .assortment__item {
   display: flex;
   justify-content: flex-end;
@@ -465,13 +472,6 @@ img {
     padding: 0 2.0625rem;
     padding-top: 3.75rem;
     line-height: 1.5rem; }
-
-.assortment__submenu--active {
-  width: 33.75rem;
-  transition: 1s; }
-  @media screen and (max-width: 768px) {
-    .assortment__submenu--active {
-      width: 0; } }
 
 .team {
   background-image: url("../image/backgrounds/team-background.png");
