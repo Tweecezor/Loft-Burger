@@ -32,6 +32,22 @@
         text-align:center;
     }
 }
+.personal--active{
+    .personal__name{
+        color:$orange_head;
+        &:before{
+            content:'\25bc';
+            top:0.125rem;
+        }
+    }
+    .personal__submenu{
+          height: 6.875rem;
+          transition: 1s; 
+          @include tablets{
+              height:11.875rem;
+          }
+      }
+}
 .personal__name{
     font-size: 0.875rem;
     font-family:'gagalin', sans-serif;
@@ -62,13 +78,13 @@
             left: -1.337rem;
         }
     }
-    &--active{
-        color:$orange_head;
-        &:before{
-            content:'\25bc';
-            top:0.125rem;
-        }
-    }
+    // &--active{
+    //     color:$orange_head;
+    //     &:before{
+    //         content:'\25bc';
+    //         top:0.125rem;
+    //     }
+    // }
     @include tablets{
         display: inline-flex;
 
@@ -103,14 +119,7 @@
         height: 6.25rem;
     }
 }
-.personal__submenu--active{
-  // animation: submenu_height 1s;
-    height: 6.875rem;
-    transition: 1s; 
-    @include tablets{
-        height:11.875rem;
-    }
-}
+
 .personal__avatar{
     margin-right: 1.25rem;
     @include tablets{

@@ -6,6 +6,9 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    @include tablets{
+        display: none;
+    }
 }
 .change__item{
     margin-bottom: 1.3125rem;
