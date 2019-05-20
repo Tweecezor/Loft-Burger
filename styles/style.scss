@@ -1,3 +1,13 @@
+
+
+
+$tablets: 768px;
+$phones: 480px;
+
+@import "../scss/media.scss";
+
+
+
 @import "../scss/fonts.scss";
 @import "../scss/layout.scss";
 @import "../scss/variables.scss";
@@ -14,6 +24,9 @@
 @import "../scss/map.scss";
 @import "../scss/footer.scss";
 @import "../scss/delivery.scss";
+@import "../scss/sprite.scss";
+
+
 
 
 

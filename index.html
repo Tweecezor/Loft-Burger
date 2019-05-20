@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500" rel="stylesheet">
 </head>
 <body>
+    
     <div class="wrapper">
         <section class="welcome section">
             <div class="container">
                 <header class="header">
-                    <img src="icons/logo.svg" class="logo">
+                    <!-- <img src="icons/logo.svg" class="logo"> -->
+                    <div class="header__logo">
+                        <svg class="sprite logo">
+                            <use xlink:href="icons/sprite.svg#logo"></use>
+                        </svg>
+                    </div>
                     <div class="header__buttons">
                         <nav class="nav">
                             <ul class="nav__list">
@@ -41,44 +47,17 @@
                             </ul>
                         </nav>
                         <a href="#" class="btn header__order-btn">Заказать</a>
+                        <a class="hamburger-menu-link" href="">
+                                <div class="hamburger-menu-link__bars"></div>
+                              </a>
+                        <!-- <div class="header__burger-menu"><a href=""></a></div> -->
                     </div>
                 </header>
                 <div class="welcome__content">
                     <div class="welcome__content-image">
                         <img src="image/burger1.png" alt="" class="burger-img">
-                        <svg class="burger-drops" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="450.527px" height="241.369px" viewBox="0 0 450.527 241.369" enable-background="new 0 0 450.527 241.369"
-	 xml:space="preserve">
-<g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#E45028" d="M88.635,55.399c-0.349-0.211,8.641-10.13,6.157-15.938
-		c-0.63-6.703-10.428-6.732-14.557-15.129C75.177,13.598,84.244,6.712,91.634,7.747c8.091,0.823,16.464,8.521,18.599,16.604
-		c0.917,4.871,1.853,10.732-3.647,17.428C102.378,48.561,89.839,53.989,88.635,55.399z"/>
-</g>
-<g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9B43B" d="M166.258,26.605c-0.229-0.048,2.804-7.127,0.375-9.796
-		c-1.589-3.506-6.913-1.654-10.716-5.409c-4.743-4.843-1.104-10.296,3.099-11.145c4.544-1.098,10.521,1.471,13.184,5.437
-		c1.405,2.46,3.003,5.453,1.265,10.124C172.443,20.286,166.649,25.612,166.258,26.605z"/>
-</g>
-<g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9B43B" d="M390.979,85.785c0.297,0.081,1.074-10.269,5.551-12.002
-		c4.004-3.249,9.104,2.208,15.854,0.002c8.514-2.941,7.587-11.706,3.184-15.277c-4.649-4.078-13.218-4.619-18.76-1.469
-		c-3.148,2.105-6.85,4.732-7.67,11.402C387.6,74.435,391.128,84.355,390.979,85.785z"/>
-</g>
-<g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#E45028" d="M413.539,222.698c0.139,0.273,8.389-5.729,12.708-3.484
-		c5.132,0.927,4.508,8.214,10.716,11.858c7.951,4.496,13.864-1.771,13.553-7.338c-0.1-6.071-5.489-12.824-11.587-14.965
-		c-3.699-1.016-8.161-2.113-13.692,1.518C419.723,212.949,414.707,221.899,413.539,222.698z"/>
-</g>
-<g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9B43B" d="M47.977,223.166c0.022,0.232-7.637-0.575-9.47,2.533
-		c-2.881,2.555,0.46,7.094-2.005,11.836c-3.227,5.961-9.511,4.094-11.563,0.328c-2.39-4.018-1.7-10.486,1.302-14.201
-		c1.936-2.068,4.323-4.479,9.3-4.196C40.114,219.121,46.913,223.085,47.977,223.166z"/>
-</g>
-<g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#E45028" d="M50.721,113.398c-0.063,0.44-14.106-4.43-18.943,0.528
-		c-6.559,3.467-2.304,13.354-9.06,21.062c-8.732,9.633-19.717,3.403-21.894-4.482c-2.7-8.502,1.488-20.194,8.795-25.76
-		c4.565-2.982,10.133-6.401,19.365-3.686C37.74,102.435,48.757,112.78,50.721,113.398z"/>
-</g>
+                        <svg class="sprite drops">
+                            <use xlink:href="icons/sprite.svg#drops"></use>
                         </svg>
                     </div> 
                     <div class="welcome__content-text">
@@ -87,7 +66,7 @@
                     </div>
                 </div>
                 <a class="scroll-down-arrow">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="28.685px" height="14.479px" viewBox="0 0 28.685 14.479" enable-background="new 0 0 28.685 14.479" xml:space="preserve">
                    <g>
                        <g>
@@ -97,6 +76,9 @@
                                C16.913,13.986,15.62,14.479,14.332,14.479z"/>
                        </g>
                    </g>
+                   </svg> -->
+                   <svg class="scroll-down">
+                        <use xlink:href="icons/sprite.svg#arrow-scroll"></use>
                    </svg>
                 </a>
             </div>
@@ -107,7 +89,10 @@
                 <ul class="we-best__list ">
                     <li class="we-best__item advantages">
                         <div class="advantages__img">
-                            <img src="icons/meat.svg" alt="" class="advantages-image">
+                            <!-- <img src="icons/meat.svg" alt="" class="advantages-image"> -->
+                            <svg class="sprite meat">
+                                <use xlink:href="icons/sprite.svg#meat"></use>
+                            </svg>
                         </div>
                         <div class="advantages__desc">
                             <h2>100% свежее мясо</h2>
@@ -117,7 +102,10 @@
                     </li>
                     <li class="we-best__item advantages">
                         <div class="advantages__img">
-                            <img src="icons/hand.svg" alt="" class="advantages-image">
+                            <!-- <img src="icons/hand.svg" alt="" class="advantages-image"> -->
+                            <svg class="sprite hand">
+                                <use xlink:href="icons/sprite.svg#hand"></use>
+                            </svg>
                         </div>
                         <div class="advantages__desc">
                             <h2 >Ручная сборка</h2>
@@ -127,7 +115,10 @@
                     </li>
                     <li class="we-best__item advantages">
                         <div class="advantages__img">
-                            <img src="icons/natural.svg" alt="" class="advantages-image">
+                            <!-- <img src="icons/natural.svg" alt="" class="advantages-image"> -->
+                            <svg class="sprite natural">
+                                <use xlink:href="icons/sprite.svg#natural"></use>
+                            </svg>
                         </div>
                         <div class="advantages__desc">
                             <h2 >Натуральные
@@ -146,9 +137,9 @@
             <div class="team__content">
                 <h1 class="team__title section-title section-title">Команда</h1>
                 <ul class="team__list">
-                    <li class="team__item personal">
-                            <div class="personal__name personal__name--active">Дэниэль Редклиф</div>
-                            <div class="personal__submenu personal__submenu--active">
+                    <li class="team__item personal personal--active">
+                            <div class="personal__name ">Дэниэль Редклиф</div>
+                            <div class="personal__submenu ">
                                 <div class="personal__avatar">
                                     <img src="image/avatars/team-avatar.png" alt="" class="personal__img">
                                 </div>
@@ -200,11 +191,11 @@
         <section class="menu section ">
             <h1 class="menu__header section-title">Меню</h1>
             <ul class="menu__nav">
-                <li class="menu__nav-item assortment">
+                <li class="menu__nav-item assortment assortment--active">
                     <div class="assortment__item"style=" background-image:url('image/menu-list-1.png');">
                         <span>Для мясоедов</span>
                     </div>
-                    <div class="assortment__submenu assortment__submenu--active">
+                    <div class="assortment__submenu ">
                         <p class="assortment__submenu-text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
                         конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно 
                         чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
@@ -329,65 +320,140 @@
         <section class="delivery section">  
             <div class="container container--delivery">
                 <h1 class="delivery__title section-title section-title--centered">Закажите Доставку</h1>
-                <form class="delivery__form" action="">
-                    <div class="delivery__data">
-                        <div class="delivery__data_container">
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="name">Имя</label>
-                                <input id='name' type="text" class="delivery__name delivery__input delivery__input--222px">
+                <!-- <form class="delivery__form-tag" action="">
+                    <div class="delivery__form">
+                        <div class="delivery__data">
+                            <div class="delivery__data_container">
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="name">Имя</label>
+                                    <input id='name' type="text" class="delivery__name delivery__input delivery__input--222px">
+                                </div>
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="tel">Телефон</label>
+                                    <input id='tel' type="text" class="delivery__tel delivery__input delivery__input--222px">
+                                </div>
                             </div>
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="tel">Телефон</label>
-                                <input id='tel' type="text" class="delivery__tel delivery__input delivery__input--222px">
+                            <div class="delivery__data_container">
+                                <div class="delivery__data_label">   
+                                    <label class="delivery__field" for="street">Улица</label>
+                                    <input id='street' type="text" class="delivery__street delivery__input delivery__input--460px">
+                                </div>
+                            </div>
+                            <div class="delivery__data_container">
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="house">Дом</label>
+                                    <input id='house' type="text" class="delivery__house delivery__input delivery__input--100px">
+                                </div>  
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="corpus">Корпус</label>
+                                    <input id='corpus' type="text" class="delivery__corpus delivery__input delivery__input--100px">
+                                </div>
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="appart">Квартира</label>
+                                    <input id='appart' type="text" class="delivery__appart delivery__input delivery__input--100px">
+                                </div>
+                                <div class="delivery__data_label">
+                                    <label class="delivery__field" for="floor">Этаж</label>
+                                    <input id='floor' type="text" class="delivery__floor delivery__input delivery__input--100px">
+                                </div>
                             </div>
                         </div>
-                        <div class="delivery__data_container">
-                            <div class="delivery__data_label">   
-                                <label class="delivery__field" for="street">Улица</label>
-                                <input id='street' type="text" class="delivery__street delivery__input delivery__input--460px">
-                            </div>
-                        </div>
-                        <div class="delivery__data_container">
+                        <div class="delivery__data">
                             <div class="delivery__data_label">
-                                <label class="delivery__field" for="house">Дом</label>
-                                <input id='house' type="text" class="delivery__house delivery__input delivery__input--100px">
-                            </div>  
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="corpus">Корпус</label>
-                                <input id='corpus' type="text" class="delivery__corpus delivery__input delivery__input--100px">
+                                <label class="delivery__field" for="text">Комментарий</label>
+                                <textarea name="textarea" id="" class="delivery__text" id="text"></textarea>
                             </div>
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="appart">Квартира</label>
-                                <input id='appart' type="text" class="delivery__appart delivery__input delivery__input--100px">
+                            <div class="delivery__data_elem">
+                                <input type="radio" name="pay" id="change" class="delivery__visually-hidden delivery__radio">
+                                <label for="change" class="delivery__radio-label delivery__change">Потребуется сдача</label>
+                                <input type="radio" name="pay" id="paycard" class="delivery__visually-hidden delivery__radio">
+                                <label for="paycard" class="delivery__radio-label">Оплата картой</label>
                             </div>
-                            <div class="delivery__data_label">
-                                <label class="delivery__field" for="floor">Этаж</label>
-                                <input id='floor' type="text" class="delivery__floor delivery__input delivery__input--100px">
+                            <div class="delivery__data_elem">
+                                <input type="checkbox"id="recall" class="delivery__checkbox delivery__visually-hidden">
+                                <label for="recall" class="delivery__checkbox-label">Не перезванивать</label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="delivery__info">
-                        <div class="delivery__data_label">
-                            <label class="delivery__field" for="text">Комментарий</label>
-                            <textarea name="textarea" id="" class="delivery__text" id="text"></textarea>
-                        </div>
-                        <div class="delivery__data_elem">
-                            <input type="radio" name="pay" id="change" class="delivery__visually-hidden delivery__radio">
-                            <label for="change" class="delivery__radio-label delivery__change">Потребуется сдача</label>
-                            <input type="radio" name="pay" id="paycard" class="delivery__visually-hidden delivery__radio">
-                            <label for="paycard" class="delivery__radio-label">Оплата картой</label>
-                        </div>
-                        <div class="delivery__data_elem">
-                            <input type="checkbox"id="recall" class="delivery__checkbox delivery__visually-hidden">
-                            <label for="recall" class="delivery__checkbox-label">Не перезванивать</label>
-                        </div>
-                         <div class="delivery__data_button">
-                           <button type="submit" class="btn delivery__order">Заказать</button>
-                           <button type="reset" class="btn delivery__reset">Очистить</button>
+                            <div class="delivery__data_button">
+                            <button type="submit" class="btn delivery__order">Заказать</button>
+                            <button type="reset" class="btn delivery__reset">Очистить</button>
 
+                            </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
+            <div class="order__form">
+              <form class="order__form-tag" id="order-form" method="GET">
+                <div class="order__form-col">
+                  <div class="order__form-row order__form-row_double">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Имя</div>
+                      <input class="order__form-input" name="name" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Телефон</div>
+                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                    </label>
+                  </div>
+                  <div class="order__form-row">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Улица</div>
+                      <input class="order__form-input" name="street" type="text" placeholder="">
+                    </label>
+                  </div>
+                  <div class="order__form-row order__form-row_quatro">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Дом</div>
+                      <input class="order__form-input" name="home" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Корпус</div>
+                      <input class="order__form-input" name="part" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Квартира</div>
+                      <input class="order__form-input" name="appt" type="text" placeholder="">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-label">Этаж</div>
+                      <input class="order__form-input" name="floor" type="text" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="order__form-col">
+                  <div class="order__form-row">
+                    <label class="order__form-block">
+                      <div class="order__form-label">Комментарий</div>
+                      <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                    </label>
+                  </div>
+                  <div class="order__form-buttons">
+                    <div class="order__form-row">
+                      <label class="order__radio">
+                        <input class="order__radio-elem" name="payment" type="radio">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Потребуется сдача</div>
+                      </label>
+                      <label class="order__radio">
+                        <input class="order__radio-elem" name="payment" type="radio">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Оплата по карте</div>
+                      </label>
+                    </div>
+                    <div class="order__form-row">
+                      <label class="order__radio order__radio_checkbox">
+                        <input class="order__radio-elem" name="callback" type="checkbox">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Не перезванивать</div>
+                      </label>
+                    </div>
+                    <div class="order__form-row">
+                      <input class="order__form-button btn" name="" type="submit" value="Заказать">
+                      <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
             </div>
         </section>
         <section class="map section">
@@ -395,20 +461,41 @@
                 <div class="container container--map">
                     <div class="contacts">
                         <address class="contacts__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</address>
-                        <a href="tel:+7 (812) 377-13-77" class="contacts__tel">+ 7 (812) 377-13-77</a>
+                        <div class="contacts__phone">    
+                            <svg class="phone-icon">
+                                <use xlink:href="icons/sprite.svg#phone"></use>
+                            </svg>
+                            <a href="tel:+7 (812) 377-13-77" class="contacts__tel">+ 7 (812) 377-13-77</a>
+                        </div>
                     </div>
                     <ul class="social__list">
                         <li class="social__item">
-                            <a href="" class="social__link">VK</a>
+                            <a href="" class="social__link">
+                                <svg class="social_icon">
+                                    <use xlink:href="icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
                         </li>
                         <li class="social__item">
-                            <a href="" class="social__link">FB</a>
+                            <a href="" class="social__link">
+                                 <svg class="social_icon">
+                                    <use xlink:href="icons/sprite.svg#fb"></use>
+                                </svg>
+                            </a>
                         </li>
                         <li class="social__item">
-                            <a href="" class="social__link">INST</a>
+                            <a href="" class="social__link">
+                                 <svg class="social_icon">
+                                    <use xlink:href="icons/sprite.svg#photo"></use>
+                                </svg>
+                            </a>
                         </li>
                         <li class="social__item">
-                            <a href="" class="social__link">TW</a>
+                            <a href="" class="social__link">
+                                <svg class="social_icon">
+                                    <use xlink:href="icons/sprite.svg#tw"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </div>

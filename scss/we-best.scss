@@ -4,10 +4,19 @@
 .we-best__list{
     display: flex;
     list-style:none;
+    @include phones{
+        flex-direction: column;
+    }
+   
 }
 .we-best__item{
     flex:1;
-    margin-right: 10px;
+    margin-right: 0.625rem;
+    @include phones{
+        display: flex;
+        flex-direction: row;
+    }
+    
     &:last-child{
         margin-right: 0;
     }
@@ -16,28 +25,35 @@
     justify-content: center;
 }
 .advantages__img{
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     display: flex;
     justify-content: center;
+    @include phones{
+        margin-right: 5%;
+    }
 }
 .advantages__desc{
     text-align: center;
+    @include phones{
+        text-align: left;
+    }
     h2{
         font-family: 'lifehack', sans-serif;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 500; 
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
+        //line-height: 1.35rem;
     }
     p{
         font-family: 'Ubuntu', sans-serif;
         font-weight: 300;
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 1.5;
     }
 }
 .we-best__title{
     color:black;
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 }
 
 // .we-best{
@@ -50,11 +66,11 @@
 //     flex-direction: column;
 //     align-items: center;
 //     justify-content: center;
-//     padding: 0 95px;
+//     padding: 0 5.9375rem;
 //     .we-best__title{
 //         color:black;
 //         @extend %section-header;
-//         padding-bottom: 100px;
+//         padding-bottom: 6.25rem;
 //     }
 //     .advantages{
 //         display: flex;
@@ -66,17 +82,17 @@
 //             justify-content: space-between;
 //             text-align: center;
 //             .advantages__img{
-//                 padding-bottom: 40px;
+//                 padding-bottom: 2.5rem;
 //             }
 //             .advantages__caption{
 //                 font-family: 'lifehack', sans-serif;
-//                 font-size: 30px;
+//                 font-size: 1.875rem;
               
 //             }
 //             .advantages__text{
 //                 font-family: 'Ubuntu', sans-serif;
 //                 font-weight: 300;
-//                 font-size: 17px;
+//                 font-size: 1.0625rem;
 //             }
 //         }
 //     }

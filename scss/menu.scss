@@ -25,6 +25,7 @@
     list-style: none;
     //width: 18%;
     display: flex;
+    z-index: 1;
   
    // height: 100%;
 }
@@ -34,7 +35,7 @@
 //             background:url('../image/menu-list-#{$pos}.png');
 //             background-size: cover;
 //             //width: 33.333333%;
-//             width:80px;
+//             width:5rem;
 //             height: 100%;
 //         }
 //     }
@@ -44,27 +45,39 @@
     // align-items: center;
    
 }
+.assortment--active{
+    .assortment__submenu{
+        width:33.75rem; 
+        transition: 1s;
+        @include tablets{
+            width: 0;
+        }  
+    }
+}
 
 .assortment__item{
     display: flex;
     justify-content: flex-end;
-    width:80px;
+    width:5rem;
     height: 100%;
     background-size: cover;
+    position: relative;
     cursor: pointer;
     span{
         font-family: 'gagalin';
-        font-size: 40px;
+        font-size: 2.5rem;
         white-space: nowrap;
           transform:rotate(-90deg);
         -webkit-transform:rotate(-90deg);
         width:inherit;
         color:white;
         height: inherit;
-        position: relative;
+       // position: relative;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        //justify-content: flex-end;
+        position: absolute;
+        top:41%;
     }
 }
 
@@ -75,41 +88,36 @@
                 width:0;
             }
             // 25%{
-            //     width:130px;
+            //     width:8.125rem;
             // }
 
             // 50%{
-            //     width:260px;
+            //     width:16.25rem;
             // }
 
             // 75%{
-            //     width:390px;
+            //     width:24.375rem;
             // }
 
             100%{
-                width:540px;
+                width:33.75rem;
             }
         }
 
 .assortment__submenu{
-    width: 0px;
+    width: 0rem;
     overflow: hidden;
     background-color:rgba(47,50,52,0.93);
     color: white;
     height: 100%;
     &-text{
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 300;font-family:'Ubuntu' ,serif;
-        padding: 0 33px;
-        padding-top:60px;
-        line-height: 24px;
+        padding: 0 2.0625rem;
+        padding-top:3.75rem;
+        line-height: 1.5rem;
     }
 }
-.assortment__submenu--active{
-    width:540px;   
-//    animation: submenu_width 2s; 
-    //transition: 1s;
-    // animation-fill-mode: forwards;
-}
+
 
 

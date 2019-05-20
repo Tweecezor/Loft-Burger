@@ -1,9 +1,14 @@
 .section-title{
     font-family: 'gagalin',sans-serif;
-    font-size:72px;
+    font-size:4.4rem;
     text-transform: uppercase; 
+    white-space: nowrap;
     &--centered{
         text-align: center;
+    }
+    @include phones{
+        font-size: 3.45rem;
+       white-space: nowrap;
     }
 }
 // .section-title--centered{
