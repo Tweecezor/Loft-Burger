@@ -791,6 +791,9 @@ img {
   text-transform: none;
   background: transparent; }
 
+.burger-slider {
+  background: orange; }
+
 .phone-icon {
   width: 0.6875rem;
   height: 0.6875rem;
