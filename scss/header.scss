@@ -19,6 +19,7 @@
 }
 .header__logo{
     margin-right: 2%;
+    z-index: 2;
 }
 .nav__list{
     display: flex;
@@ -94,7 +95,84 @@
     }
 }
 
-
+.hamburger-nav{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:rgba(47,50,52,.99);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.hamburger-nav__list{
+    font-size: 24px;
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+.hamburger-nav__item{
+    margin-bottom: 60px;
+    position: relative;
+    &:after{
+        content:'';
+        width:8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        top:180%;
+        left:50%;
+    }
+    &:last-child{
+        &:after{
+           display: none;
+        }
+    }
+}
+.hamburger-nav__link{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+}
+.hamburger-close{
+    position: absolute;
+   top:3%;
+   right:5%;
+   cursor: pointer;
+   opacity: 1;
+   //display: none;
+   &:before{
+       content:'';
+       width:3px;
+       height:15px;
+       background-color: grey;
+       position: absolute;
+       border-radius: 3px;
+       transform: rotate(-40deg);
+       top: 1px;
+        left: 2px;
+   }
+   &:after{
+    content:'';
+    width:3px;
+    height:15px;
+    background-color: grey;
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(40deg);
+    top: 1px;
+    left: 2px;
+}
+.close-menu{
+    display: none;
+}
+}
+.hamburger-menu-visible{
+    display: flex;
+}
 
 // }
 // .logo{

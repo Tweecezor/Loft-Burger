@@ -47,9 +47,40 @@
                             </ul>
                         </nav>
                         <a href="#" class="btn header__order-btn">Заказать</a>
-                        <a class="hamburger-menu-link" href="">
-                                <div class="hamburger-menu-link__bars"></div>
-                              </a>
+                        <a class="hamburger-menu-link" href="#" id="hamburger-menu-open">
+                            <div class="hamburger-menu-link__bars"></div>
+                        </a>
+                        <!-- <div class="hamburger-menu"> -->
+                            <nav class="hamburger-nav" id="hamburger-menu">
+                                <ul class="hamburger-nav__list">
+                                    <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">О нас</a>
+                                    </li>
+                                    <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">Бургеры</a>
+                                    </li>
+                                    <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">Команда</a>
+                                    </li>
+                                    <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">Меню</a>
+                                    </li>
+                                    <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">Отзывы</a>
+                                    </li>
+                                    <!-- <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">Как мы работаем</a>
+                                    </li> -->
+                                    <li class="hamburger-nav__item">
+                                        <a href="#" class="hamburger-nav__link">Контакты</a>
+                                    </li>
+                                </ul>
+                                <div id ='close-hamburger'class="hamburger-close">
+                                    <a href="" class="close-menu">x</a>
+                                </div>
+                            </nav>
+                           
+                        <!-- </div> -->
                         <!-- <div class="header__burger-menu"><a href=""></a></div> -->
                     </div>
                 </header>
@@ -133,19 +164,66 @@
         <section class="burger-slider section">
             <ul class="burger-slider__list">
                 <li class="burger-slider__item">
-                    <div class="left-arrow">
-                        <svg class="scroll-down">
+                    <a class="left-arrow">
+                        <svg class="scroll-down scroll-left ">
                             <use xlink:href="icons/sprite.svg#arrow-scroll"></use>
                         </svg>
-                    </div>
+                    </a>
                 </li>
-                <li class="burger-slider__item"></li>
+                <li class="burger-slider__item container">
+                    <ul class="burger-content">
+                        <li class="burger-content__item">
+                            <div class="burger-content-icons">
+                                <div class="composition">
+                                    <svg class="burger-icon">
+                                        <use xlink:href="icons/sprite.svg#burger"></use>
+                                    </svg>
+                                    <span class="composition__text">состав</span>
+                                </div>
+                                <div class="ccal">
+                                    <svg class="ccal-icon">
+                                        <use xlink:href="icons/sprite.svg#weight"></use>
+                                    </svg>
+                                    <!-- <div class="ccal__text"> -->
+                                        <span class="ccal__text-count">1200</span>
+                                        <div class="ccal__text-txt">ККАЛ</div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <div class="burger-content__image">
+                                    <img class="burger-content__img" src="burgers-slider/black-burger.png" alt="">
+                                </div> 
+                        </li>
+                        <li class="burger-content__item">
+                            <ul class="burger-desc">
+                                <li class="burger-desc__item">
+                                    <h1 class="section-title burger-content__title">Dark beef burger</h1>
+                                  
+                                </li>
+                                <li class="burger-desc__item burger-content__desc">
+                                    <p class="burger-content__text">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                        салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                </li>
+                                <li class="burger-desc__item burger-content__order">
+                                    <div class="burder-content__price">500<span>рублей</span></div>
+
+                                    <div class="burger-order-btn">
+                                            <a href="#" class="burger-content__btn btn">Заказать</a>
+                                    </div>    
+                                </li>
+                            </ul>   
+                        </li>
+                    </ul>
+                </li>
                 <li class="burger-slider__item">
-                    <div class="right-arrow">
-                        <svg class="scroll-down">
+                    <a class="right-arrow">
+                        <svg class="scroll-down scroll-right">
                             <use xlink:href="icons/sprite.svg#arrow-scroll"></use>
                         </svg>
-                    </div>
+                    </a>
                 </li>
             </ul>
         </section> 
@@ -532,5 +610,6 @@
             </ul>
         <!-- </aside> -->
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
