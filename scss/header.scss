@@ -96,7 +96,7 @@
 }
 
 .hamburger-nav{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top:0;
@@ -109,17 +109,21 @@
     display: none;
 }
 .hamburger-nav__list{
-    font-size: 24px;
+   font-size: 1.5rem;
+   
     font-family: 'Ubuntu';
     text-align: center;
+    @include phones{
+        font-size: 0.8125rem;
+    }
 }
 .hamburger-nav__item{
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
     position: relative;
     &:after{
         content:'';
-        width:8px;
-        height: 8px;
+        width:0.5rem;
+        height: 0.5rem;
         border-radius: 50%;
         background: white;
         position: absolute;
@@ -146,25 +150,25 @@
    //display: none;
    &:before{
        content:'';
-       width:3px;
-       height:15px;
+       width:0.1875rem;
+       height:0.9375rem;
        background-color: grey;
        position: absolute;
-       border-radius: 3px;
+       border-radius: 0.1875rem;
        transform: rotate(-40deg);
-       top: 1px;
-        left: 2px;
+       top: 0.0625rem;
+        left: 0.125rem;
    }
    &:after{
     content:'';
-    width:3px;
-    height:15px;
+    width:0.1875rem;
+    height:0.9375rem;
     background-color: grey;
     position: absolute;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     transform: rotate(40deg);
-    top: 1px;
-    left: 2px;
+    top: 0.0625rem;
+    left: 0.125rem;
 }
 .close-menu{
     display: none;
