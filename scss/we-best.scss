@@ -54,6 +54,9 @@
 .we-best__title{
     color:black;
     margin-bottom: 6.25rem;
+    @include phones{
+        margin-bottom: 5.25rem;
+    }
 }
 
 // .we-best{
