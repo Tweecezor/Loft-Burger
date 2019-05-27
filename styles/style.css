@@ -395,14 +395,14 @@ img {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: -100%;
   left: 0;
   background-color: rgba(47, 50, 52, 0.99);
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none; }
+  transition: 1s; }
 
 .hamburger-nav__list {
   font-size: 1.5rem;
@@ -435,8 +435,10 @@ img {
 .hamburger-close {
   cursor: pointer;
   position: absolute;
-  top: 3%;
-  right: 5%;
+  top: 2.2rem;
+  right: .9rem;
+  width: 1.125rem;
+  height: 1.125rem;
   cursor: pointer;
   opacity: 1; }
   .hamburger-close:before {
@@ -448,7 +450,7 @@ img {
     border-radius: 0.1875rem;
     transform: rotate(-40deg);
     top: 0.0625rem;
-    left: 0.125rem; }
+    left: 0.5rem; }
   .hamburger-close:after {
     content: '';
     width: 0.1875rem;
@@ -458,12 +460,13 @@ img {
     border-radius: 0.1875rem;
     transform: rotate(40deg);
     top: 0.0625rem;
-    left: 0.125rem; }
+    left: 0.5rem; }
   .hamburger-close .close-menu {
     display: none; }
 
 .hamburger-menu-visible {
-  display: flex; }
+  top: 0%;
+  transition: 1s; }
 
 .btn {
   border-radius: 0.3125rem;
@@ -513,9 +516,11 @@ img {
 .assortment--active .assortment__submenu {
   width: 33.75rem;
   transition: 1s; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .assortment--active .assortment__submenu {
-      width: 0; } }
+      width: 10rem; } }
+.assortment--active .assortment__item span {
+  color: #f9b43b; }
 
 .assortment__item {
   display: flex;
@@ -546,6 +551,7 @@ img {
     width: 33.75rem; } }
 .assortment__submenu {
   width: 0rem;
+  transition: 1s;
   overflow: hidden;
   background-color: rgba(47, 50, 52, 0.93);
   color: white;
@@ -557,6 +563,11 @@ img {
     padding: 0 2.0625rem;
     padding-top: 3.75rem;
     line-height: 1.5rem; }
+    @media screen and (max-width: 480px) {
+      .assortment__submenu-text {
+        font-size: 0.56rem;
+        padding: 0 0.6rem;
+        padding-top: 0.75rem; } }
 
 .team {
   background-image: url("../image/backgrounds/team-background.png");
@@ -632,6 +643,7 @@ img {
 
 .personal__submenu {
   height: 0;
+  transition: 1s;
   display: flex;
   flex-direction: row;
   overflow: hidden;
