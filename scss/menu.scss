@@ -50,7 +50,7 @@
         width:33.75rem; 
         transition: 1s;
         @include phones{
-            width: 10rem;
+            width: 100%;
         }  
     }
     .assortment__item{

@@ -59,3 +59,27 @@ menu.addEventListener('click',function(){
         })
     }
 })
+//слайдер первая попытка
+
+// const slider = document.querySelector('.burger-slider__content_list'),
+//       slider_item = document.querySelectorAll('.burger-slider__content_item'),
+//       slider_length = slider_item.length;
+// slider.addEventListener('click',function(){
+//     for(let i=0; i < slider_length; i++){
+//         slider_item[i].classList.remove('burger-slider__content_item--active');
+//     }
+//     for(let i=0; i < slider_length; i++){
+//         slider_item[i].addEventListener('click',function(e){
+//             e.preventDefault();
+//             e.stopPropagation();
+//             if(slider_item[i].classList.contains('burger-slider__content_item--active')){
+//                 slider_item[i].classList.remove('burger-slider__content_item--active');
+//             } else{
+//                 for(let i=0; i < menu_length; i++){
+//                     slider_item[i].classList.remove('burger-slider__content_item--active');
+//                 }
+//                 slider_item[i].classList.add('burger-slider__content_item--active');
+//             }
+//         });
+//     }
+// });

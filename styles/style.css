@@ -518,7 +518,7 @@ img {
   transition: 1s; }
   @media screen and (max-width: 480px) {
     .assortment--active .assortment__submenu {
-      width: 10rem; } }
+      width: 100%; } }
 .assortment--active .assortment__item span {
   color: #f9b43b; }
 
@@ -1067,6 +1067,13 @@ img {
 
 .scroll-right {
   transform: rotate(-90deg); }
+
+.slider-list {
+  display: flex;
+  overflow: hidden; }
+
+.slider-item {
+  width: 940px; }
 
 .phone-icon {
   width: 0.6875rem;
