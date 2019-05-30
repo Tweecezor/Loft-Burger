@@ -60,26 +60,39 @@
     
   
 }
-.burger-slider__list{
+.burger-slider__container{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     // background: red;
    
    
 }
-.burger-slider__item{
-    background-repeat: no-repeat;
-    &:nth-child(2){
-        margin: 0 2.5rem;
+.burger-slider__arrow{
+    display: flex;
+    align-items: center;
+}
+.burger-slider__list{
+    margin: 0 2.5rem;
         @include tablets{
             margin: 0;
         }
-    }
-    &:first-child,&:last-child{
-        display: flex;
-        align-items: center;
-    }
 }
-.burger-content{
+// .burger-slider__item{
+//     background-repeat: no-repeat;
+//     &:nth-child(2){
+//         margin: 0 2.5rem;
+//         @include tablets{
+//             margin: 0;
+//         }
+//     }
+//     &:first-child,&:last-child{
+//         display: flex;
+//         align-items: center;
+//     }
+// }
+.burger-slider__item{
     display: flex;
     @include tablets{
         flex-direction: column;
