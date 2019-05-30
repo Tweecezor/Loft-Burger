@@ -899,14 +899,18 @@ img {
 
 .burger-slider__wrap {
   max-width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  max-height: 100%; }
 
 .burger-slider__arrow {
   display: flex;
   align-items: center; }
 
 .burger-slider__list {
-  margin: 0 2.5rem; }
+  margin: 0 2.5rem;
+  display: flex;
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .burger-slider__list {
       margin: 0; } }
