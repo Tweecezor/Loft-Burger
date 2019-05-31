@@ -913,6 +913,9 @@ img {
 
 .burger-slider__list {
   display: flex;
+  position: relative;
+  will-change: right;
+  transition: right .75s;
   margin-left: 1.25rem; }
   @media screen and (max-width: 768px) {
     .burger-slider__list {
@@ -920,16 +923,29 @@ img {
 
 .burger-slider__item {
   display: inline-flex;
-  width: 52.5625rem;
+  width: calc(100vw - 580px);
   position: relative;
   height: 100%;
   justify-content: center;
   max-height: 100%;
   max-width: 100%;
   margin-right: 2.8125rem; }
+  .burger-slider__item:nth-child(3) .burger-content__img {
+    max-width: 110%;
+    margin-left: -6.6875rem; }
+    @media screen and (max-width: 768px) {
+      .burger-slider__item:nth-child(3) .burger-content__img {
+        margin-left: 3.313rem; } }
+    @media screen and (max-width: 480px) {
+      .burger-slider__item:nth-child(3) .burger-content__img {
+        margin-left: 0; } }
   @media screen and (max-width: 768px) {
     .burger-slider__item {
-      flex-direction: column; } }
+      flex-direction: column;
+      width: calc(100vw - 110px); } }
+  @media screen and (max-width: 480px) {
+    .burger-slider__item {
+      width: calc(100vw - 70px); } }
 
 .burger-content__title {
   white-space: normal;
@@ -1094,6 +1110,9 @@ img {
 
 .slider-item {
   width: 940px; }
+
+.arrow {
+  cursor: pointer; }
 
 .phone-icon {
   width: 0.6875rem;
