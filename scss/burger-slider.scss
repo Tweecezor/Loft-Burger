@@ -110,7 +110,7 @@
 // }
 .burger-slider__item{
     display: inline-flex;
-    width: calc(100vw - 580px);
+    width:52.8125rem;
     position: relative;
     height:100%;
     justify-content: center;
@@ -119,7 +119,7 @@
     margin-right: 2.8125rem;
     &:nth-child(3){
         .burger-content__img{
-            max-width:110%;
+            max-width:100%;
             margin-left: -6.6875rem;
             @include tablets{
                 margin-left: 3.313rem;
