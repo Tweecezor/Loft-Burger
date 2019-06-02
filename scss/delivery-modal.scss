@@ -1,0 +1,64 @@
+.delivery-modal{
+    position: absolute;
+    top:calc(100vh * 6);
+    left:0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.delivery-modal__popup{
+    background: white;
+    color:black;
+    width:12.5rem;
+    height: 6.5625rem;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.delivery-modal__content{
+    text-align: center;
+    padding-top:10%;
+    font-weight: 300;
+}
+.delivery-modal-close{
+    background: $orange_button;
+    left:50%;
+    top:80%;
+    position: absolute;
+    transform: translate(-50%,-80%);
+    cursor: pointer;
+}
+// .delivery-modal__close{
+//     top:8%;
+//     right:12%;
+//     position: absolute;
+//     cursor: pointer;
+//     &:before{
+//         content:'';
+//         width:0.1875rem;
+//         height:0.9375rem;
+//         background-color: $orange_head;
+//         position: absolute;
+//         border-radius: 0.1875rem;
+//         transform: rotate(-40deg);
+//         top: 0.0625rem;
+//         left: 0.5rem;
+//     }
+//     &:after{
+//         content:'';
+//         width:0.1875rem;
+//         height:0.9375rem;
+//         background-color: $orange_head;
+//         position: absolute;
+//         border-radius: 0.1875rem;
+//         transform: rotate(40deg);
+//         top: 0.0625rem;
+//         left: 0.5rem;
+//     }
+// }
+// .modal__close{
+//     display: none;
+// }

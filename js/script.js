@@ -60,14 +60,13 @@ menu.addEventListener('click',function(){
 })
 //слайдер первая попытка
 var slider_width = document.querySelector('.burger-slider__item').offsetWidth;
-
 var slider_margin_right = parseInt(getComputedStyle(document.querySelector('.burger-slider__item'), true).marginRight);
-console.log(slider_margin_right);
+//console.log(slider_margin_right);
 var step = slider_width + slider_margin_right;
 var slider_length = document.querySelectorAll('.burger-slider__item').length;
 var maxRight = step*slider_length;
 var slider_list = document.querySelector('.burger-slider__list');
-console.log(slider_list);
+//console.log(slider_list);
 var left = document.querySelector('.left-arrow');
 var right = document.querySelector('.right-arrow');
 let currentRight = 0;
@@ -102,8 +101,9 @@ left.addEventListener('click',function(e){
        slider_list.style.right = currentRight + "px";
     }
 })
-console.log(left);
-console.log(right);
+//console.log(left);
+//console.log(right);
+
 // const slider = document.querySelector('.burger-slider__content_list'),
 //       slider_item = document.querySelectorAll('.burger-slider__content_item'),
 //       slider_length = slider_item.length;
@@ -127,32 +127,174 @@ console.log(right);
 //     }
 // });
 
+
+// var text = document.querySelector('.reviews__text');
+// var txt = getComputedStyle(text);
+
+// console.log(txt.display);
+// if(txt.display=='none'){
+//    console.log(true);
+// }
+// text.style.display = 'block';
+// console.log(txt.display);
+
+
+
+
+
+
+
+
+
+
+
 const reviews = document.querySelector('.reviews__list'),
       reviews_item = document.querySelector(".reviews__item"),
       reviews_modal = document.querySelector('.reviews-modal'),
       reviews_text = document.querySelector('.reviews-modal__content'),
       reviews_modal_close = document.querySelector('.reviews-modal__close');
-console.log(reviews);
-console.log(reviews_item);
-console.log(reviews_modal);
-console.log(reviews_text);
+// console.log(reviews);
+// console.log(reviews_item);
+// console.log(reviews_modal);
+// console.log(reviews_text);
 reviews.addEventListener('click', e => {
     let elem = e.target;
     console.log(elem);
     if(elem.tagName === "BUTTON"){
-        console.log('jntkxtyj децствие по уполчанию');
-        reviews_modal.style.display = 'block';
-        let modal_txt = elem.previousElementSibling;
-        console.log(modal_txt);
-        console.log(modal_txt.children[1]);
-        reviews_text.innerHTML = modal_txt.innerHTML;
+        //console.log('jntkxtyj децствие по уполчанию');
+        var text = document.querySelectorAll('.reviews__text');
+        var txt = getComputedStyle(text[0]);
+        if(txt.display=='none'){
+            for(let i =0; i< text.length;i++){
+                text[i].style.display = 'block';
+            }
+            console.log(txt.display);
+            reviews_modal.style.display = 'block';
+            let modal_txt = elem.previousElementSibling;
+           // console.log(modal_txt);
+           // console.log(modal_txt.children[1]);
+            reviews_text.innerHTML = modal_txt.innerHTML;
+            for(let i =0; i< text.length;i++){
+                text[i].style.display = 'none';
+            }
+            document.body.classList.add('no-scroll');
+            console.log(txt.display);
+        } else{    
+            reviews_modal.style.display = 'block';
+            let modal_txt = elem.previousElementSibling;
+        // console.log(modal_txt);
+        // console.log(modal_txt.children[1]);
+            reviews_text.innerHTML = modal_txt.innerHTML;
+            document.body.classList.add('no-scroll');
+        }
     }
 })
 reviews_modal_close.addEventListener('click', function(){
     reviews_modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
 })
 document.addEventListener('keyup', function(e){
     if(e.keyCode===27){   
         reviews_modal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     }
 })
+
+//валидность формы 
+const myForm = document.querySelector('#order-form');
+console.log(myForm.elements);
+const send = document.querySelector('.order__form-button');
+console.log(myForm.elements.name);
+console.log(send);
+const delivery_modal_content = document.querySelector('.delivery-modal__content');
+const delivery_modal = document.querySelector('.delivery-modal');
+// const delivery_close = document.querySelector('.delivery-modal-close');
+const delivery_close = document.querySelector('.delivery-modal-close');
+send.addEventListener('click',function(e){
+    e.preventDefault();
+    if(validateForm(myForm)){
+        let url ='https://webdev-api.loftschool.com/sendmail';
+        let formData = new FormData();
+        formData.append('name',myForm.elements.name.value);
+        formData.append('phone',myForm.elements.phone.value);
+        formData.append('comment',myForm.elements.comment.value);
+        formData.append('to','your@mail.ru');
+        console.log(formData.getAll);
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open("POST",url);
+        xhr.send(formData);
+        xhr.addEventListener('load',function(){
+            if(xhr.response.status == 1){
+                delivery_modal_content.innerHTML = 'Сообщениие отправлено';
+            } else{
+                delivery_modal_content.innerHTML = 'Ошибка отправления';
+            }
+            delivery_modal.style.display = 'block';
+            document.body.classList.add('no-scroll');
+        })
+    }
+})
+delivery_close.addEventListener('click',function(e){
+    e.preventDefault();
+    delivery_modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+})
+document.addEventListener('keyup', function(e){
+    if(e.keyCode===27){   
+        delivery_modal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
+})
+function validateForm(form){
+    let valid = true;
+    if(!validateField(form.elements.name)){
+        valid = false;
+    }
+    if(!validateField(form.elements.phone)){
+        valid = false;
+    }
+    if(!validateField(form.elements.street)){
+        valid = false;
+    }
+    if(!validateField(form.elements.home)){
+        valid = false;
+    }
+    if(!validateField(form.elements.part)){
+        valid = false;
+    }
+    if(!validateField(form.elements.appt)){
+        valid = false;
+    }
+    if(!validateField(form.elements.floor)){
+        valid = false;
+    }
+    if(!validateField(form.elements.comment)){
+        valid = false;
+    }
+    let radio = document.querySelectorAll('.order__radio-elem');
+    let radioFake = document.querySelectorAll('.order__radio-fake');
+    let i =0;
+        if(!radio[i].checked && !radio[i+1].checked){
+            valid = false;
+            for(let j=0;j<radioFake.length; j++){
+                radioFake[j].style.border = "0.0625rem solid red";
+            }
+        }
+        else{
+            for(let j=0;j<radioFake.length; j++){
+                radioFake[j].style.border = "0.0625rem solid #d1cfcb";
+            }
+        }
+    return valid;
+}
+function validateField(field){
+    if(!field.checkValidity()){
+        field.style.border = "0.0625rem solid red";
+        return false;
+    } else{
+        field.style.border = "0.0625rem solid #d1cfcb";
+        return true;
+    }
+}
+

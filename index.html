@@ -693,35 +693,35 @@
                   <div class="order__form-row order__form-row_double">
                     <label class="order__form-block">
                       <div class="order__form-label">Имя</div>
-                      <input class="order__form-input" name="name" type="text" placeholder="">
+                      <input class="order__form-input" name="name" type="text" placeholder="" required>
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Телефон</div>
-                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                      <input class="order__form-input phone-mask" name="phone" type="text" placeholder="" required>
                     </label>
                   </div>
                   <div class="order__form-row">
                     <label class="order__form-block">
                       <div class="order__form-label">Улица</div>
-                      <input class="order__form-input" name="street" type="text" placeholder="">
+                      <input class="order__form-input" name="street" type="text" placeholder="" required>
                     </label>
                   </div>
                   <div class="order__form-row order__form-row_quatro">
                     <label class="order__form-block">
                       <div class="order__form-label">Дом</div>
-                      <input class="order__form-input" name="home" type="text" placeholder="">
+                      <input class="order__form-input" name="home" type="text" placeholder="" required>
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Корпус</div>
-                      <input class="order__form-input" name="part" type="text" placeholder="">
+                      <input class="order__form-input" name="part" type="text" placeholder="" required>
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Квартира</div>
-                      <input class="order__form-input" name="appt" type="text" placeholder="">
+                      <input class="order__form-input" name="appt" type="text" placeholder="" required>
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-label">Этаж</div>
-                      <input class="order__form-input" name="floor" type="text" placeholder="">
+                      <input class="order__form-input" name="floor" type="text" placeholder="" required>
                     </label>
                   </div>
                 </div>
@@ -729,7 +729,7 @@
                   <div class="order__form-row">
                     <label class="order__form-block">
                       <div class="order__form-label">Комментарий</div>
-                      <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                      <textarea class="order__form-input order__form-input_textarea" name="comment" required></textarea>
                     </label>
                   </div>
                   <div class="order__form-buttons">
@@ -748,7 +748,7 @@
                     <div class="order__form-row">
                       <label class="order__radio order__radio_checkbox">
                         <input class="order__radio-elem" name="callback" type="checkbox">
-                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-fake-check"></div>
                         <div class="order__radio-title">Не перезванивать</div>
                       </label>
                     </div>
@@ -829,6 +829,14 @@
             <div class="reviews-modal__close">
                 <a href="#" class="modal__close">x</a>
             </div>
+        </div>
+    </div>
+    <div class="modal delivery-modal">
+        <div class="delivery-modal__popup">
+            <div class="delivery-modal__content">
+                <!-- повлапдыыоплт -->
+            </div>
+            <button class="delivery-modal-close btn">Закрыть</button>
         </div>
     </div>
     <script src="js/script.js"></script>

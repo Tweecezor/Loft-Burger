@@ -11,17 +11,27 @@
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 460px;
+    height: 255px;
+    @include tablets{
+        width: 380px;
+        height: 200px;
+    }
+    @include phones{
+        width: 310px;
+        height: 155px;
+    }
 }
 .reviews-modal__content{
     color:black;
     opacity: 1;
     background: white;
     border-radius: 5px;
-    padding: 30px 26px 0 26px;
+    // padding: 30px 26px 0 26px;
 }
 .reviews-modal__close{
-    top:5%;
-    right:5%;
+    top:8%;
+    right:10%;
     position: absolute;
     cursor: pointer;
     &:before{
