@@ -126,3 +126,33 @@ console.log(right);
 //         });
 //     }
 // });
+
+const reviews = document.querySelector('.reviews__list'),
+      reviews_item = document.querySelector(".reviews__item"),
+      reviews_modal = document.querySelector('.reviews-modal'),
+      reviews_text = document.querySelector('.reviews-modal__content'),
+      reviews_modal_close = document.querySelector('.reviews-modal__close');
+console.log(reviews);
+console.log(reviews_item);
+console.log(reviews_modal);
+console.log(reviews_text);
+reviews.addEventListener('click', e => {
+    let elem = e.target;
+    console.log(elem);
+    if(elem.tagName === "BUTTON"){
+        console.log('jntkxtyj децствие по уполчанию');
+        reviews_modal.style.display = 'block';
+        let modal_txt = elem.previousElementSibling;
+        console.log(modal_txt);
+        console.log(modal_txt.children[1]);
+        reviews_text.innerHTML = modal_txt.innerHTML;
+    }
+})
+reviews_modal_close.addEventListener('click', function(){
+    reviews_modal.style.display = 'none';
+})
+document.addEventListener('keyup', function(e){
+    if(e.keyCode===27){   
+        reviews_modal.style.display = 'none';
+    }
+})
