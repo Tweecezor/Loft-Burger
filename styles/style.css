@@ -1197,7 +1197,11 @@ img {
   color: black;
   opacity: 1;
   background: white;
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 20px 20px 20px 20px; }
+  @media screen and (max-width: 768px) {
+    .reviews-modal__content .reviews__name {
+      font-size: 0.875rem; } }
 
 .reviews-modal__close {
   top: 8%;

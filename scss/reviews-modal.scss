@@ -27,6 +27,12 @@
     opacity: 1;
     background: white;
     border-radius: 5px;
+    padding: 20px 20px 20px 20px;
+    .reviews__name{
+        @include tablets{
+            font-size: 0.875rem;
+        }
+    }
     // padding: 30px 26px 0 26px;
 }
 .reviews-modal__close{
