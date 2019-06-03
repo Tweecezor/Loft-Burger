@@ -603,6 +603,13 @@ img {
   margin-bottom: 3.4375rem;
   position: absolute;
   top: 22%; }
+  @media screen and (max-width: 768px) {
+    .team__title {
+      position: absolute;
+      top: 20%; } }
+  @media screen and (max-width: 480px) {
+    .team__title {
+      top: 2%; } }
 
 .team__list {
   margin-top: 90px; }

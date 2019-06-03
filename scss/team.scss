@@ -25,6 +25,13 @@
    //
     position: absolute;
     top: 22%;
+    @include tablets{
+        position: absolute;
+        top: 20%;
+    }
+    @include phones{
+        top: 2%;
+    }
 }
 //
 .team__list{
