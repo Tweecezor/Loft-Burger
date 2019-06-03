@@ -600,7 +600,12 @@ img {
 
 .team__title {
   color: #f9b43b;
-  margin-bottom: 3.4375rem; }
+  margin-bottom: 3.4375rem;
+  position: absolute;
+  top: 22%; }
+
+.team__list {
+  margin-top: 90px; }
 
 .team__item {
   margin-bottom: 2.1875rem; }
@@ -1237,7 +1242,7 @@ img {
   top: calc(100vh * 6);
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: none; }
 
 .delivery-modal__popup {

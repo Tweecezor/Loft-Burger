@@ -22,7 +22,15 @@
 .team__title{
    color:$orange_head;
    margin-bottom: 3.4375rem;
+   //
+    position: absolute;
+    top: 22%;
 }
+//
+.team__list{
+    margin-top: 90px;
+}
+//
 .team__item{
     margin-bottom: 2.1875rem;
     &:last-child{

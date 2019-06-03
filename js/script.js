@@ -39,6 +39,7 @@ team.addEventListener('click',function(){
 const menu = document.querySelector('.menu__nav'),
       menu_item = document.querySelectorAll('.assortment'),
       menu_length = menu_item.length;
+const fullmenu = document.querySelector('.menu');
 menu.addEventListener('click',function(){
     for(let i=0; i < menu_length; i++){
         menu_item[i].classList.remove('assortment--active');
@@ -56,6 +57,11 @@ menu.addEventListener('click',function(){
                 menu_item[i].classList.add('assortment--active');
             }
         })
+    }
+})
+fullmenu.addEventListener('click',function(){
+    for(let i=0; i < menu_length; i++){
+        menu_item[i].classList.remove('assortment--active');
     }
 })
 //слайдер первая попытка
@@ -201,6 +207,57 @@ document.addEventListener('keyup', function(e){
 })
 
 //валидность формы 
+const phone = document.querySelector('.phone-mask');
+phone.addEventListener('keydown',function(e){
+    let isDigit = false;
+    let isControl = false;
+    let isPlus = false;
+    let isDash = false;
+    if(e.key>=0||e.key<=9){
+        isDigit = true;
+    }
+    if(e.key == "-"){
+        isDash = true;
+    }
+    if(e.key == "+"){
+        isPlus = true;
+    }
+    if(e.key == "ArrowLeft"||e.key == "ArrowRight"||e.key == "Backspace"){
+        isDash = true;
+    }
+    if(!isControl&&!isDash&&!isDigit&&!isPlus){
+        e.preventDefault();
+    }
+})
+const room = document.querySelector('.room');
+room.addEventListener('keydown',function(e){
+    let isDigit = false;
+    let isControl = false;
+    if(e.key>=0||e.key<=9){
+        isDigit = true;
+    }
+    if(e.key == "ArrowLeft"||e.key == "ArrowRight"||e.key == "Backspace"){
+        isControl = true;
+    }
+    if(!isControl&&!isDigit){
+        e.preventDefault();
+    }
+})
+const floor = document.querySelector('.floor');
+floor.addEventListener('keydown',function(e){
+    let isDigit = false;
+    let isControl = false;
+    if(e.key>=0||e.key<=9){
+        isDigit = true;
+    }
+    if(e.key == "ArrowLeft"||e.key == "ArrowRight"||e.key == "Backspace"){
+        isControl = true;
+    }
+    if(!isControl&&!isDigit){
+        e.preventDefault();
+    }
+})
+
 const myForm = document.querySelector('#order-form');
 console.log(myForm.elements);
 const send = document.querySelector('.order__form-button');
@@ -257,18 +314,6 @@ function validateForm(form){
     if(!validateField(form.elements.street)){
         valid = false;
     }
-    if(!validateField(form.elements.home)){
-        valid = false;
-    }
-    if(!validateField(form.elements.part)){
-        valid = false;
-    }
-    if(!validateField(form.elements.appt)){
-        valid = false;
-    }
-    if(!validateField(form.elements.floor)){
-        valid = false;
-    }
     if(!validateField(form.elements.comment)){
         valid = false;
     }
@@ -289,8 +334,15 @@ function validateForm(form){
     return valid;
 }
 function validateField(field){
+  
     if(!field.checkValidity()){
+         if(field.name=='room'){
+            console.log('комната не валидна');
+        }
         field.style.border = "0.0625rem solid red";
+        // if(field.name=='phone'){
+        //     console.log('pjone');
+        // }
         return false;
     } else{
         field.style.border = "0.0625rem solid #d1cfcb";
