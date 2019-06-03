@@ -49,9 +49,14 @@
     .assortment__submenu{
         width:33.75rem; 
         transition: 1s;
-        @include tablets{
-            width: 0;
+        @include phones{
+            width: 100%;
         }  
+    }
+    .assortment__item{
+        span{
+            color: $orange_head;
+        }
     }
 }
 
@@ -106,6 +111,7 @@
 
 .assortment__submenu{
     width: 0rem;
+    transition: 1s;
     overflow: hidden;
     background-color:rgba(47,50,52,0.93);
     color: white;
@@ -116,6 +122,12 @@
         padding: 0 2.0625rem;
         padding-top:3.75rem;
         line-height: 1.5rem;
+        @include phones{
+            font-size: 0.56rem;
+            padding: 0 0.6rem;
+            padding-top: 0.75rem;
+           
+        }
     }
 }
 

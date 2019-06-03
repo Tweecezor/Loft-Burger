@@ -285,7 +285,7 @@
     left: -624.9375rem;
   }
   
-  .order__radio-fake {
+  .order__radio-fake, .order__radio-fake-check {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
@@ -322,7 +322,7 @@
   }
   
   .order__radio_checkbox {
-    .order__radio-fake {
+    .order__radio-fake-check {
       border-radius: 0rem;
     }
     .order__radio-elem {
@@ -333,7 +333,7 @@
       }
     }
     .order__radio-elem:checked {
-      &+.order__radio-fake {
+      &+ .order__radio-fake-check{
         &:after {
         background:url('../icons/checked.png') no-repeat;
         background-size: contain;

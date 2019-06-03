@@ -1,6 +1,7 @@
 .reviews{
     height: 100vh;
     background:grey;
+    position: relative;
 }
 .reviews__list{
     display: flex;
@@ -73,6 +74,7 @@
 //   @extend %button;
   background-color: #2f3234;
   width: 6.875rem;
+  cursor: pointer;
   @include tablets{
       margin: 0 auto;
   }
