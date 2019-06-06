@@ -165,7 +165,7 @@ const reviews = document.querySelector('.reviews__list'),
 // console.log(reviews_text);
 reviews.addEventListener('click', e => {
     let elem = e.target;
-    console.log(elem);
+   //console.log(elem);
     if(elem.tagName === "BUTTON"){
         //console.log('jntkxtyj децствие по уполчанию');
         var text = document.querySelectorAll('.reviews__text');
@@ -259,10 +259,10 @@ floor.addEventListener('keydown',function(e){
 })
 
 const myForm = document.querySelector('#order-form');
-console.log(myForm.elements);
+//console.log(myForm.elements);
 const send = document.querySelector('.order__form-button');
-console.log(myForm.elements.name);
-console.log(send);
+//console.log(myForm.elements.name);
+//console.log(send);
 const delivery_modal_content = document.querySelector('.delivery-modal__content');
 const delivery_modal = document.querySelector('.delivery-modal');
 // const delivery_close = document.querySelector('.delivery-modal-close');
@@ -340,13 +340,116 @@ function validateField(field){
             console.log('комната не валидна');
         }
         field.style.border = "0.0625rem solid red";
-        // if(field.name=='phone'){
-        //     console.log('pjone');
-        // }
         return false;
     } else{
         field.style.border = "0.0625rem solid #d1cfcb";
         return true;
     }
 }
+
+// const section = document.querySelectorAll('.section');
+// let index = 0;
+// document.addEventListener('wheel',function(e){
+//     e.preventDefault();
+//     index++;
+//     section.forEach((sections,i) => {
+//         if(i===index){
+//             sections.scrollIntoView({behavior:'smooth'});
+//         }
+//     })
+// })
+// document.addEventListener('wheel',function(e){
+//     console.log(e.deltaY);
+// })
+
+var countwheel = 0;
+
+$(function(){
+    var generateDots = function(){
+        $('.section').each(function(){
+            var dot = $('<li>',{
+                attr : {
+                    class: 'change__item '
+                },
+                html: '<a href="#" class="change__link"></a>'
+            })
+            $('.change__list').append(dot);
+
+        })
+    }
+    generateDots();
+    $('.change__item').first().addClass('change__item-active')
+    //let scroll = true;
+    $(document).on('wheel',function(e){
+        e.preventDefault(); 
+        e.stopPropagation();
+        console.log(e.originalEvent.deltaY);
+        let direction = e.originalEvent.deltaY;
+        let reqItem;
+        let container = $('.onepage-slider');
+        let items = container.find('.section');
+        let currentItem = items.filter('.section--active');
+        let currentDotIndex = currentItem.index();
+        let currentDot = $('.change__item').eq(currentDotIndex);
+        console.log(currentDot);
+        if(direction > 0){
+             reqItem = currentItem.next();
+             reqDot = currentDot.next();
+             console.log(reqDot);
+        } else{
+             reqItem = currentItem.prev();
+             reqDot = currentDot.prev();
+             console.log(reqDot);
+        }
+        let reqIndex = reqItem.index();
+        let list = $('.onepage-slider__list');
+        let duration = 1000;
+        
+     
+              //  let duration = ;
+       // console.log(reqIndex);
+
+        if(reqItem.length){
+            list.animate({
+                'top' : -(reqIndex*100) + '%'
+            },duration,function(){
+                currentItem.removeClass('section--active');
+                currentDot.removeClass('change__item-active');
+                reqItem.addClass('section--active');
+                reqDot.addClass('change__item-active');
+            })
+        }
+           
+      
+    })
+    $('body').on('click','.change__item',function(e){
+        {
+            e.preventDefault();
+            let $this = $(this);
+            console.log($(this));
+            let container = $('.change__list');
+            let items = container.find('.change__item');
+            dot($this,items);
+            
+           
+        }
+    })
+    var dot = function($this,items){
+        
+        let currentItem = items.filter('.change__item-active');
+        // let reqItem =
+        let list = $('.onepage-slider__list');
+      
+        let index = $this.index();
+       // console.log(index);
+        list.animate({
+            'top' : -(index*100) + '%'
+        },500,function(){
+            currentItem.removeClass('change__item-active');
+           
+            $this.addClass('change__item-active');
+        })
+    }
+    });
+  
 
