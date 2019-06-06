@@ -1283,7 +1283,7 @@ img {
   position: relative; }
 
 .onepage-slider__list {
-  position: absolute;
+  position: relative;
   top: 0%;
   left: 0%; }
 
