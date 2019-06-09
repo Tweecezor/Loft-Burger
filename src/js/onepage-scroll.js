@@ -111,12 +111,100 @@
                 'top' : -(index*100) + '%'
             },500,function(){
                 currentItem.removeClass('change__item-active');
-               
                 $this.addClass('change__item-active');
             })
         }
         });
+
+        $('body').on('click','.scroll-down-arrow',function(e){
+            e.preventDefault();
+            let $this = $(this);
+            console.log($(this));
+            // let container = $('.scroll-down-arrow');
+            // let items = container.find('.change__item');
+            let container = $('.change__list');
+            let items = container.find('.change__item');
+            let currentItem = items.filter('.change__item-active');
+            console.log(currentItem.next());
+            let nextItem = currentItem.next();
+            let list = $('.onepage-slider__list');
+            list.animate({
+                'top': -(1*100)+ '%'
+            },500,function(){
+                currentItem.removeClass('change__item-active');
+                nextItem.addClass('change__item-active');
+            })
+        })
+
+        $('body').on('click','.nav__item',function(e){
+            e.preventDefault();
+            console.log(e.target.text);
+            value=e.target.text;
+            console.log(typeof(value));
+            let list = $('.onepage-slider__list');
+            switch(value){
+                case 'О нас':  
+                console.log("sfgsfg");  
+                list.animate({
+                    'top': -(1*100)+ '%'
+                })
+                break;
+                case 'Бургеры':    
+                list.animate({
+                    'top': -(2*100)+ '%'
+                })
+                break;
+                case 'Команда':    
+                list.animate({
+                    'top': -(3*100)+ '%'
+                })
+                break;
+                case 'Меню':    
+                list.animate({
+                    'top': -(4*100)+ '%'
+                })
+                break;
+                case 'Отзывы':    
+                list.animate({
+                    'top': -(5*100)+ '%'
+                })
+                break;
+                case 'Как мы работаем':    
+                list.animate({
+                    'top': -(6*100)+ '%'
+                })
+                break;
+                case 'Контакты':    
+                list.animate({
+                    'top': -(8*100)+ '%'
+                })
+                break;
+
+            }
+            // switch(value){
+            //     case ''
+            // }
+            // let reqItem;
+            // let reqDot;
+            // let container = $('.nav_list');
+            // let items = container.find('.nav_item');
+            // let currentItem = $(this);
+            // let currentItemIndex = currentItem.index()+1;
+            // let currentDotIndex = currentItem.index();
+            // console.log(currentDotIndex);
+            // console.log(currentItemIndex);
+            // let currentDot = $('.change__item').eq(currentDotIndex);
+            // let list = $('.onepage-slider__list');
+            // list.animate({
+            //     'top': -(currentItemIndex*100)+ '%'
+            // },1000,function(){
+            //     // currentItem.removeClass('change__item-active');
+            //     // nextItem.addClass('change__item-active');
+            // })
+
+        })
 })();
+
 
 
         
