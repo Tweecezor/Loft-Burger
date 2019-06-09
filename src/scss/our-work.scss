@@ -1,0 +1,26 @@
+.our-work{
+    background-image: url('../images/our-work.jpg');
+    background-size: cover;
+}
+.our-work-container{
+    justify-content: center;
+    align-items: center;
+}
+.our-work__title{
+    margin-bottom: 6.25rem;
+    @include phones{
+        white-space: normal;
+        margin-bottom: 0;
+    }
+}
+.our-work__video{
+    width: 70%;
+    height: 45%;
+    @include tablets{
+        height: 35%;
+    }
+    @include phones{
+        width: 95%;
+        height: 40%;
+    }
+}

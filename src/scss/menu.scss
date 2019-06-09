@@ -1,0 +1,135 @@
+.menu{
+    display: flex;
+    background:url('../images/menu-background.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    justify-content: flex-end;
+    //background-size: cover;
+}
+ .menu__header{
+//     color:white;
+//     padding-left: 9%;
+//     // background: #000;
+//     height: 40vh;
+//     display: flex;
+//     align-items: flex-end;
+//     background: #000;
+//     width: 82%;
+    position: absolute;
+    left:10%;
+    top:30%;
+    color:white;
+}
+.menu__nav{
+    //background: red;
+    list-style: none;
+    //width: 18%;
+    display: flex;
+    z-index: 1;
+  
+   // height: 100%;
+}
+// @each $pos in (1,2,3) {
+//     .assortment:nth-child(#{$pos}){
+//         .assortment__item{
+//             background:url('../image/menu-list-#{$pos}.png');
+//             background-size: cover;
+//             //width: 33.333333%;
+//             width:5rem;
+//             height: 100%;
+//         }
+//     }
+// }
+.assortment{
+     display: flex;
+    // align-items: center;
+   
+}
+.assortment--active{
+    .assortment__submenu{
+        width:33.75rem; 
+        transition: 1s;
+        @include phones{
+            width: 100%;
+        }  
+    }
+    .assortment__item{
+        span{
+            color: $orange_head;
+        }
+    }
+}
+
+.assortment__item{
+    display: flex;
+    justify-content: flex-end;
+    width:5rem;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    span{
+        font-family: 'gagalin';
+        font-size: 2.5rem;
+        white-space: nowrap;
+          transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+        width:inherit;
+        color:white;
+        height: inherit;
+       // position: relative;
+        display: flex;
+        align-items: center;
+        //justify-content: flex-end;
+        position: absolute;
+        top:41%;
+    }
+}
+
+
+
+        @keyframes submenu_width{
+            0%{
+                width:0;
+            }
+            // 25%{
+            //     width:8.125rem;
+            // }
+
+            // 50%{
+            //     width:16.25rem;
+            // }
+
+            // 75%{
+            //     width:24.375rem;
+            // }
+
+            100%{
+                width:33.75rem;
+            }
+        }
+
+.assortment__submenu{
+    width: 0rem;
+    transition: 1s;
+    overflow: hidden;
+    background-color:rgba(47,50,52,0.93);
+    color: white;
+    height: 100%;
+    &-text{
+        font-size: 0.875rem;
+        font-weight: 300;font-family:'Ubuntu' ,serif;
+        padding: 0 2.0625rem;
+        padding-top:3.75rem;
+        line-height: 1.5rem;
+        @include phones{
+            font-size: 0.56rem;
+            padding: 0 0.6rem;
+            padding-top: 0.75rem;
+           
+        }
+    }
+}
+
+
+
