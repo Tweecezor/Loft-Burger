@@ -45,9 +45,9 @@
                 list.animate({
                     'top' : -(reqIndex*100) + '%'
                 },duration,function(){
-                    currentItem.removeClass('section--active');
+                    // currentItem.removeClass('section--active');
                     currentDot.removeClass('change__item-active');
-                    reqItem.addClass('section--active');
+                    // reqItem.addClass('section--active');
                     reqDot.addClass('change__item-active');
                 })
             }
@@ -79,9 +79,9 @@
                     list.animate({
                         'top' : -(reqIndex*100) + '%'
                     },durationAnim,function(){
-                        currentItem.removeClass('section--active');
+                        // currentItem.removeClass('section--active');
                         currentDot.removeClass('change__item-active');
-                        reqItem.addClass('section--active');
+                        // reqItem.addClass('section--active');
                         reqDot.addClass('change__item-active');
                     })
                 }
@@ -136,50 +136,92 @@
             })
         })
 
+        $('.header__order-btn').on('click',function(e){
+            e.preventDefault();
+            let currentDot = $('.change__item-active');
+            let newDot = $('.change__item').eq(7);
+            let list = $('.onepage-slider__list');
+            list.animate({
+                'top': -(7*100)+ '%'
+            },500,function(){
+                currentDot.removeClass('change__item-active');
+                 newDot.addClass('change__item-active');
+            })
+        })
+
+
         $('body').on('click','.nav__item',function(e){
             e.preventDefault();
             console.log(e.target.text);
             let value=e.target.text;
+            let currentItem = $(this);
+            let currentIndex = currentItem.index()+1;
+            let container = $('.change__list');
+            let items = container.find('.change__item');
+            let activeDot = items.filter('.change__item-active');
+            let currentDot = $('.change__item').eq(currentIndex);
+            console.log(currentIndex);
             console.log(typeof(value));
             let list = $('.onepage-slider__list');
             switch(value){
                 case 'О нас':  
                 console.log("sfgsfg");  
                 list.animate({
-                    'top': -(1*100)+ '%'
+                    'top': -(currentIndex*100)+ '%'
+                },500,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
                 case 'Бургеры':    
                 list.animate({
-                    'top': -(2*100)+ '%'
+                    'top': -(currentIndex*100)+ '%'
+                },500,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
                 case 'Команда':    
                 list.animate({
-                    'top': -(3*100)+ '%'
+                    'top': -(currentIndex*100)+ '%'
+                },500,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
                 case 'Меню':    
                 list.animate({
-                    'top': -(4*100)+ '%'
+                    'top': -(currentIndex*100)+ '%'
+                },500,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
                 case 'Отзывы':    
                 list.animate({
-                    'top': -(5*100)+ '%'
+                    'top': -(currentIndex*100)+ '%'
+                },1000,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
                 case 'Как мы работаем':    
                 list.animate({
-                    'top': -(6*100)+ '%'
+                    'top': -(currentIndex*100)+ '%'
+                },500,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
                 case 'Контакты':    
+                currentDot = $('.change__item').eq(currentIndex+1);
                 list.animate({
-                    'top': -(8*100)+ '%'
+                    'top': -((currentIndex+1)*100)+ '%'
+                },500,function(){
+                    activeDot.removeClass('change__item-active');
+                    currentDot.addClass('change__item-active');
                 })
                 break;
-
             }
         })
 })();

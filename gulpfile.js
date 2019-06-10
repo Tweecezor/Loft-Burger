@@ -154,7 +154,7 @@ task('server', function() {
 task("watch",function(){
     watch("./src/scss/*.scss", series("styles"));
     watch("./src/*.html", series("copy:html"));
-    watch("./src/scripts/*.js", series("scripts"));
+    watch("./src/js/*.js", series("scripts"));
 })
 
 
