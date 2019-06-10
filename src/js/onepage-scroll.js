@@ -45,9 +45,9 @@
                 list.animate({
                     'top' : -(reqIndex*100) + '%'
                 },duration,function(){
-                    // currentItem.removeClass('section--active');
+                    currentItem.removeClass('section--active');
                     currentDot.removeClass('change__item-active');
-                    // reqItem.addClass('section--active');
+                    reqItem.addClass('section--active');
                     reqDot.addClass('change__item-active');
                 })
             }
