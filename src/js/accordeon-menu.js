@@ -13,6 +13,7 @@ menu.addEventListener('click',function(){
         menu_item[i].addEventListener('click',function(e){
             e.preventDefault();
             e.stopPropagation();
+            console.log(i);
             if(menu_item[i].classList.contains('assortment--active')){
                 menu_item[i].classList.remove('assortment--active');
             } else{

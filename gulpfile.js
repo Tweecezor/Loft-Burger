@@ -49,8 +49,9 @@ task('copy:fonts',()=>{
 });
 const images = [
     'src/image/*.png',
+    'src/image/*.jpg',
     'src/image/avatars/*',
-    'src/image/backgrounds/*',
+    'src/image/backgrounds/*.jpg',
     'src/burgers-slider/*',
     'src/image/player/*'
     ]
