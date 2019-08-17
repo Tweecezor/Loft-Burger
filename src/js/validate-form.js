@@ -1,5 +1,4 @@
 
-
 (function(){
     //валидность формы 
 const phone = document.querySelector('.phone-mask');

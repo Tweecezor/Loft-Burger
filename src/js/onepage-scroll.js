@@ -148,7 +148,11 @@ for(let i = 0; i < dot_length; i++){
 
 
 function scroll (i){
-    list.style.top = -nub*i+"%";
+  console.log(i + nub)
+  console.log(`${i} + 10`)
+    // list.style.transform = `translateY(${-nub*i})vh`;
+    // list.style.color = 'red';
+    list.style.transform = `translateY(${-nub*i}vh)`;
     list.style.transition = "1.5s"
 }
 

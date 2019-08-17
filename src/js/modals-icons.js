@@ -25,26 +25,26 @@ const reviews = document.querySelector('.reviews__list'),
 reviews.addEventListener('click', e => {
     console.log('burron');
     let elem = e.target;
-   //console.log(elem);
+   console.log(elem.tagName);
     if(elem.tagName === "BUTTON"){
-        //console.log('jntkxtyj децствие по уполчанию');
+        console.log('jntkxtyj децствие по уполчанию');
         var text = document.querySelectorAll('.reviews__text');
         var txt = getComputedStyle(text[0]);
         if(txt.display=='none'){
             for(let i =0; i< text.length;i++){
                 text[i].style.display = 'block';
             }
-            console.log(txt.display);
+            // console.log(txt.display);
             reviews_modal.style.display = 'block';
             let modal_txt = elem.previousElementSibling;
-           // console.log(modal_txt);
-           // console.log(modal_txt.children[1]);
+          //  console.log(modal_txt);
+          //  console.log(modal_txt.children[1]);
             reviews_text.innerHTML = modal_txt.innerHTML;
             for(let i =0; i< text.length;i++){
                 text[i].style.display = 'none';
             }
             document.body.classList.add('no-scroll');
-            console.log(txt.display);
+            // console.log(txt.display);
         } else{    
             reviews_modal.style.display = 'block';
             let modal_txt = elem.previousElementSibling;
